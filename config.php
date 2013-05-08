@@ -22,7 +22,7 @@ function getdb(){
 		echo "Error de conexion";
 	}
 }
-
+//llama a la funcion getdb() para tener la conexión activa
 getdb();
 
 
