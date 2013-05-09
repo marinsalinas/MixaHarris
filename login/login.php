@@ -14,6 +14,7 @@
 		<tr><td><input type='submit' value='Entrar' /></td></tr>
 		</form>
 	</table>
+<div><P>No estas Registrado? <a href="../formulario/view/alta_clientes.php">Hazlo</a></P></div>
 </center>
 </body>
 </html>
