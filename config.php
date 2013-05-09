@@ -1,5 +1,5 @@
 <?php
-print "config.php";
+//print "config.php";
 
 /* Script el cual gestiona la conexión con la base de datos de MySQL*/
 
@@ -13,7 +13,7 @@ function getdb(){
 	global $cfg;
 	$db=mysql_pconnect($cfg["db_host"], $cfg["db_user"],$cfg["db_pass"]);
 	$db_sel = mysql_select_db($cfg["db_name"], $db);	
-	print_r($db_sel);
+	//print_r($db_sel);
 	
 	if(empty($db_sel))
 	{

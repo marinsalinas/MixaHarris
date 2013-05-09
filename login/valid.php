@@ -1,5 +1,5 @@
 <?php
-if (empty($_SESSION['user'])) {
+if (empty($_SESSION['usuario'])) {
 	echo "<script>";
 	echo "alert('No tiene sesion')";
 	echo "</script>";
