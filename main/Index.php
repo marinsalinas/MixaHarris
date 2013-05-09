@@ -10,7 +10,7 @@
 	require_once("../login/valid.php");
 	$usuario = $_SESSION['usuario'];
 	//print_r($usuario);
-	echo"<p>"."Bienvenido ".$usuario->nombre;
+	echo"<p>"."Bienvenido ".$usuario->clientesNombre;
 	?>
 	<a href="../login/logout.php">Logout</a></p>
 </body>

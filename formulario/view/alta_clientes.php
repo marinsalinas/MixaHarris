@@ -9,7 +9,7 @@
 <body>
 	<h1>Formularios Altas</h1>
 	<table>
-		<form name='altasClientes' action="../action/save_clientes.php" method='post'>
+		<form name='altasClientes' action="../action/save_clientes.php" method='post' accept-charset='utf-8'>
 			<tr><td>Nombre(s):</td><td><input type='text' name='nombre'/></td></tr>
 			<tr><td>Apellido(s):</td><td><input type='text' name='apellidos'/></td></tr>
 			<tr><td>Nombre de Usuario:</td><td><input type='text' name='username'/></td></tr>
