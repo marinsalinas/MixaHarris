@@ -16,4 +16,6 @@ $sql= "SELECT id, nombre
 		return $proveedores;
 }
 
+
+
 ?>
