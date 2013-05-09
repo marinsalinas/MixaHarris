@@ -1,15 +1,13 @@
 <?php
 print "config.php";
 
-/* connection manager
-     proyecto maestria
-*/
+/* Script el cual gestiona la conexión con la base de datos de MySQL*/
 
 //Conexión de la Base de Datos
 $cfg["db_host"]="localhost";    //dirección del host de la Base de datos
 $cfg["db_name"]="MixaHarris";    //nombre de la base de datos
 $cfg["db_user"]="root";   //nombre del usuario del administrador de la base de datos
-$cfg["db_pass"]="salinass27_";    //password la contraseña cambia
+$cfg["db_pass"]="salinass27_";    //password la contraseña cambia segun el host de la base de datos
 
 function getdb(){
 	global $cfg;
@@ -24,7 +22,4 @@ function getdb(){
 }
 //llama a la funcion getdb() para tener la conexión activa
 getdb();
-
-
-
 ?>
