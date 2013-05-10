@@ -27,7 +27,7 @@
 
 	//El primer paso es contruir la instruccion en mysql se construye a partir de los datos del arreglo $cliente[];
 	$sql = "INSERT INTO MixaHarris.clientes (idclientes, clientesNombre, clientesApellido, clientesDireccion, clientesCP, clientesEmail, clientesTelefono, clientesUsername, ClientesCelular, clientesOcupacion, clientesSexo, clientesNacimiento, clientesPassword)
-	 VALUES (NULL, '$cliente[0]', '$cliente[1]', '$cliente[2]', '$cliente[3]', '$cliente[4]', '$cliente[5]', '$cliente[6]', '$cliente[7]', '$cliente[8]', '$cliente[9]', '$cliente[10]', '$cliente[11]');";
+	 VALUES (1, '$cliente[0]', '$cliente[1]', '$cliente[2]', '$cliente[3]', '$cliente[4]', '$cliente[5]', '$cliente[6]', '$cliente[7]', '$cliente[8]', '$cliente[9]', '$cliente[10]', '$cliente[11]');";
 	//echo "<p>".$sql."</p>";
 	$result= mysql_query($sql);
 	if ($result >0){

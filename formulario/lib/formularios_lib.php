@@ -1,11 +1,11 @@
 <?php
-echo "algo";
+//echo "algo";
 require_once( '../../config.php');
 
-echo "Funciona";
+//echo "Funciona";
 function drop_proveedores(){	
-$sql= "SELECT id, nombre
-	FROM  proveedores " ;
+$sql= "SELECT idproveedor, proveedorNombre
+	FROM  proveedor " ;
 	 	$proveedores= array();
 		$result= mysql_query($sql);
 		$i= 0;
