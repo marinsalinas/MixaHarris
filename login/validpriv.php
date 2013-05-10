@@ -1,18 +1,32 @@
 <?php
-/*$user=$_SESSION['usuario'];
-echo "<pre>";
-print_r($user);
-echo "</pre>";
-foreach ($user as $key => $atrib) {
-	$privilegio = $atrib;
+
+function validAdmin(){
+	$user=$_SESSION['usuario'];
+	//echo "<pre>";
+	//print_r($user);
+	//echo "</pre>";
+	foreach ($user as $key => $atrib) {
+		$privilegio = $atrib;
+	}
+	//echo "<br>";
+	//print_r($privilegio);
+	if($privilegio == 1){
+		header('Location: ../login/blockpage.php');
+		echo "HOLAAA<br>";
+	}
 }
-echo "<br>";
-print_r($privilegio);
-if($privilegio == 1){
-	header('Location: ../main/Index.php');
-	echo "HOLAAA<br>";
+function validUser(){
+	$user=$_SESSION['usuario'];
+	//echo "<pre>";
+	//print_r($user);
+	//echo "</pre>";
+	foreach ($user as $key => $atrib) {
+		$privilegio = $atrib;
+	}
+	echo "<br>";
+	print_r($privilegio);
+	if($privilegio == 0){
+		header('Location: ../login/blockpage.php');
+	}
 }
-if ($privilegio == 0) {
-	header('Location: ../main/AdminIndex.php');
-}*/
 ?>
