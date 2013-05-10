@@ -9,6 +9,7 @@
 	session_start();
 	require_once("../login/valid.php");
 	require_once("../login/validpriv.php");
+	validAdmin();
 	echo "<h1>MixaHarris - Admin Index </h1>";
 	$admin = $_SESSION['usuario'];
 	//print_r($usuario);

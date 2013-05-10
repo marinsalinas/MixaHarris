@@ -9,6 +9,7 @@
 	session_start();
 	require_once("../login/valid.php");
 	require_once("../login/validpriv.php");
+	//validUser();
 	echo "<h1>MixaHarris - User Index </h1>";
 	$usuario = $_SESSION['usuario'];
 	//print_r($usuario);
