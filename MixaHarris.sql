@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.8
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-05-2013 a las 00:44:09
--- Versión del servidor: 5.5.31
--- Versión de PHP: 5.4.14
+-- Tiempo de generación: 10-05-2013 a las 03:00:03
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `MixaHarris`
+-- Base de datos: `mixaharris`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `administrador` (
   `administradorNacimiento` date NOT NULL,
   `administradorTelefono` bigint(20) NOT NULL,
   `administradorEmail` varchar(45) NOT NULL,
-  `administradorPrivilegio` int(1) NOT NULL DEFAULT '0',
+  `administradorPrivilegios` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idadministrador`),
   UNIQUE KEY `idadministrador_UNIQUE` (`idadministrador`),
   UNIQUE KEY `administradorUsername_UNIQUE` (`administradorUsername`)
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   PRIMARY KEY (`idclientes`),
   UNIQUE KEY `idclientes_UNIQUE` (`idclientes`),
   UNIQUE KEY `clientesUsername_UNIQUE` (`clientesUsername`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabla de Clientes' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabla de Clientes' AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -74,7 +74,9 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 INSERT INTO `clientes` (`idclientes`, `clientesNombre`, `clientesApellido`, `clientesDireccion`, `clientesCP`, `clientesEmail`, `clientesTelefono`, `clientesUsername`, `clientesPassword`, `clientesCelular`, `clientesOcupacion`, `clientesNacimiento`, `clientesSexo`, `clientesPrivilegio`) VALUES
 (1, 'Marin', 'Salinas Sánchez', 'Niño Artillero 113, Altamira', 64750, 'm.mslns27@gmail.com', 83592311, 'marinslns', 'efe4c534f51bff41db4c4f07500225f3', 8115780151, 'Estudiante', '1994-01-27', '', 1),
 (2, 'Andrea Lizbeth', 'Rojas Hernández', 'Condadores #333 Tecnológico Monterrey N.L.', 64700, 'arojas_hdz@hotmail.com', 83403812, 'arojas_hdz', 'arojas1505608', 8114813953, 'Estudiante', '1993-05-04', 'F', 1),
-(3, 'CibrÃ¡n', 'Samaniego RolÃ³n', 'Pase Lucio 29 Mirador, Monterrey N.L.', 64750, 'CibrnSamaniegoRoln@superrito.com', 83344556, 'evernshoid', '81dc9bdb52d04dc20036dbd8313ed055', 8114567814, 'Keeper', '1958-02-16', 'M', 1);
+(3, 'CibrÃ¡n', 'Samaniego RolÃ³n', 'Pase Lucio 29 Mirador, Monterrey N.L.', 64750, 'CibrnSamaniegoRoln@superrito.com', 83344556, 'evernshoid', '81dc9bdb52d04dc20036dbd8313ed055', 8114567814, 'Keeper', '1958-02-16', 'M', 1),
+(4, '', '', '', 0, '', 0, '', 'd41d8cd98f00b204e9800998ecf8427e', 0, '', '0000-00-00', '', 1),
+(6, 'Jose', 'Gomez Cardenas', 'Cerrada Harto No. 469', 66064, 'acbriones2@outlook.com', 12876723, 'josego', '827ccb0eea8a706c4c34a16891f84e7b', 8115689235, 'Profesor', '1985-01-05', 'M', 1);
 
 -- --------------------------------------------------------
 
@@ -97,10 +99,10 @@ CREATE TABLE IF NOT EXISTS `inventario` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `logAdmin`
+-- Estructura de tabla para la tabla `logadmin`
 --
 
-CREATE TABLE IF NOT EXISTS `logAdmin` (
+CREATE TABLE IF NOT EXISTS `logadmin` (
   `idlogAdmin` int(11) NOT NULL,
   `logAdminFecha` date NOT NULL,
   `logAdminHoraI` time NOT NULL,
@@ -114,10 +116,10 @@ CREATE TABLE IF NOT EXISTS `logAdmin` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `logUser`
+-- Estructura de tabla para la tabla `loguser`
 --
 
-CREATE TABLE IF NOT EXISTS `logUser` (
+CREATE TABLE IF NOT EXISTS `loguser` (
   `idlogUser` int(11) NOT NULL,
   `logUserFecha` date NOT NULL,
   `logUserHoraI` time NOT NULL,
@@ -135,19 +137,27 @@ CREATE TABLE IF NOT EXISTS `logUser` (
 --
 
 CREATE TABLE IF NOT EXISTS `productos` (
-  `idproductos` int(11) NOT NULL,
+  `idproductos` int(11) NOT NULL AUTO_INCREMENT,
   `productosNombre` varchar(45) NOT NULL,
   `productosMarca` varchar(45) NOT NULL,
   `productosModelo` varchar(45) NOT NULL,
   `productosDescripcion` varchar(60) NOT NULL,
   `productosPrecio` double NOT NULL,
   `productosTipo` varchar(45) NOT NULL,
-  `productosGarantia` varchar(45) NOT NULL,
+  `productosGarantia` tinyint(1) NOT NULL,
   `proveedor_idproveedor` int(11) NOT NULL,
   PRIMARY KEY (`idproductos`,`proveedor_idproveedor`),
   UNIQUE KEY `idproductos_UNIQUE` (`idproductos`),
   KEY `fk_productos_proveedor_idx` (`proveedor_idproveedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`idproductos`, `productosNombre`, `productosMarca`, `productosModelo`, `productosDescripcion`, `productosPrecio`, `productosTipo`, `productosGarantia`, `proveedor_idproveedor`) VALUES
+(1, 'Saxofon', 'Yamaha', 'YAS-23', 'Saxofon Alto', 16000, 'Instrumento', 1, 2),
+(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra electrica', 20000, 'Instrumento', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -156,13 +166,21 @@ CREATE TABLE IF NOT EXISTS `productos` (
 --
 
 CREATE TABLE IF NOT EXISTS `proveedor` (
-  `idproveedor` int(11) NOT NULL,
+  `idproveedor` int(11) NOT NULL AUTO_INCREMENT,
   `proveedorNombre` varchar(45) NOT NULL,
   `proveedorContacto` varchar(45) NOT NULL,
   `proveedorTelefono` bigint(20) NOT NULL,
   PRIMARY KEY (`idproveedor`),
   UNIQUE KEY `idproveedor_UNIQUE` (`idproveedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Volcado de datos para la tabla `proveedor`
+--
+
+INSERT INTO `proveedor` (`idproveedor`, `proveedorNombre`, `proveedorContacto`, `proveedorTelefono`) VALUES
+(1, 'Yamaha', 'Rodolfo Gutierrez', 12871298),
+(2, 'SaxUK', 'Roberto Hinojosa', 98128723);
 
 --
 -- Restricciones para tablas volcadas
@@ -175,15 +193,15 @@ ALTER TABLE `inventario`
   ADD CONSTRAINT `fk_inventario_productos1` FOREIGN KEY (`productos_idproductos`, `productos_proveedor_idproveedor`) REFERENCES `productos` (`idproductos`, `proveedor_idproveedor`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `logAdmin`
+-- Filtros para la tabla `logadmin`
 --
-ALTER TABLE `logAdmin`
+ALTER TABLE `logadmin`
   ADD CONSTRAINT `fk_logAdmin_administrador1` FOREIGN KEY (`administrador_idadministrador`) REFERENCES `administrador` (`idadministrador`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `logUser`
+-- Filtros para la tabla `loguser`
 --
-ALTER TABLE `logUser`
+ALTER TABLE `loguser`
   ADD CONSTRAINT `fk_logUser_clientes1` FOREIGN KEY (`clientes_idclientes`) REFERENCES `clientes` (`idclientes`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
