@@ -2,17 +2,17 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Bienvenido - Usuario</title>
+	<title>Bienvenido Adminstrador</title>
 </head>
 <body>
 	<?php
 	session_start();
 	require_once("../login/valid.php");
 	require_once("../login/validpriv.php");
-	echo "<h1>MixaHarris - User Index </h1>";
-	$usuario = $_SESSION['usuario'];
+	echo "<h1>MixaHarris - Admin Index </h1>";
+	$admin = $_SESSION['usuario'];
 	//print_r($usuario);
-		echo"<p>"."Bienvenido ".$usuario->clientesNombre;
+		echo"<p>"."Bienvenido ".$admin->administradorNombre;
 	?>
 	<a href="../login/logout.php">Logout</a></p>
 </body>
