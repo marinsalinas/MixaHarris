@@ -18,10 +18,10 @@
 	//echo "<br>Privilegio:".$privilegio;
 	//si privilegio == 1;
 	if($privilegio == 1){
-		echo"<p>"."Bienvenido ".$usuario->clientesNombre;
+		echo"<p>"."Bienvenido".$usuario->clientesNombre;
 	}
 	if($privilegio == 0){
-		echo"<p>"."Bienvenido ".$usuario->administradorNombre;
+		echo"<p>"."Bienvenido".$usuario->administradorNombre;
 	}
 
 	?>
