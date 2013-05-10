@@ -20,12 +20,12 @@
 	}
 	$admin[]=$_POST['anio']."-".$_POST['mes']."-".$_POST['dia'];//Concatena para tener el formato "YYYY-mm-dd" para MySQL
 	$admin[]=md5($_POST['pass']);
-	echo"<pre>\n";
-		print_r($admin);
-	echo"</pre\n>";
+	//echo"<pre>\n";
+		//print_r($admin);
+	//echo"</pre\n>";
 
 	//El primer paso es contruir la instruccion en mysql se construye a partir de los datos del arreglo $cliente[];
-	$sql = "INSERT INTO MixaHarris.administrador (idadministrador, administradorNombre, administradorApellido, administradorUsername, administradorTelefono, administradorEmail, administradorNacimiento, administradorPassword)
+	$sql = "INSERT INTO mixaharris.administrador (idadministrador, administradorNombre, administradorApellido, administradorUsername, administradorTelefono, administradorEmail, administradorNacimiento, administradorPassword)
 	 VALUES (NULL, '$admin[0]', '$admin[1]', '$admin[2]', '$admin[3]', '$admin[4]', '$admin[5]', '$admin[6]');";
 	//echo "<p>".$sql."</p>";
 	$result= mysql_query($sql);
@@ -36,5 +36,6 @@
 		echo  "Existe una inconsistencia en informacion";
 	}
 	?>
+	<a href="../view/alta_admin.php" target="_self"> <input type="button" name="boton" value="Agregar otro" /> </a>
 </body>
 </hmtl>

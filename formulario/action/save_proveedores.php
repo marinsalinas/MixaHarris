@@ -18,24 +18,23 @@
 	foreach($datosProv as $key => $datoProv){
 	$prov[] = $_POST[$datoProv];
 	}
-	echo"<pre>\n";
-		print_r($prov);
-	echo"</pre\n>";
+	//echo"<pre>\n";
+		//print_r($prov);
+	//echo"</pre\n>";
 
 	/*El primer paso es contruir la instruccion en mysql se construye a partir de los datos del arreglo $cliente[];*/
-	$sql = "INSERT INTO MixaHarris.proveedor (idproveedor, proveedorNombre, proveedorContacto, proveedorTelefono)
-	 VALUES (NULL, '$prov[0]', '$prov[1]', '$prov[2]');";
-	echo "<p>".$sql."</p>";
+	$sql = "INSERT INTO mixaharris.proveedor (idproveedor, proveedorNombre, proveedorContacto, proveedorTelefono)
+	 VALUES (NULL, '$prov[0]', '$prov[1]', '$prov[2]');";//tuve que cambiar a miinúsculas mixaharris no MixaHarris
+	//echo "<p>".$sql."</p>";
 	$result= mysql_query($sql);
 	if ($result >0){
-		echo "Se ha ingresado la informacion exitosamente";
+		echo "Se ha ingresado la informacion exitosamente<br>";
 
 	}
 	else {
-		echo  "Existe una inconsistencia en informacion";
+		echo  "Existe una inconsistencia en informacion<br>";
 	}
-
 	?>
-			echo "<a href="../view/alta_productos.php" target="_self"> <input type="button" name="boton" value="Agregar otro" /> </a>";
+	<a href="../view/alta_proveedores.php" target="_self"> <input type="button" name="boton" value="Agregar otro" /> </a>
 </body>
 </hmtl>

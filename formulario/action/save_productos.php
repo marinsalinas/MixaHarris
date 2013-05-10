@@ -25,7 +25,7 @@
 	echo"</pre\n>";
 
 	/*El primer paso es contruir la instruccion en mysql se construye a partir de los datos del arreglo $cliente[];*/
-	$sql = "INSERT INTO MixaHarris.productos (idproductos, productosNombre, productosMarca, productosModelo, productosDescripcion, productosPrecio, productosTipo, productosGarantia, proveedor_idproveedor)
+	$sql = "INSERT INTO mixaharris.productos (idproductos, productosNombre, productosMarca, productosModelo, productosDescripcion, productosPrecio, productosTipo, productosGarantia, proveedor_idproveedor)
 	 VALUES (NULL, '$producto[0]', '$producto[1]', '$producto[2]', '$producto[3]', '$producto[4]', '$producto[5]', '$producto[6]','$producto[7]' );";
 	//echo "<p>".$sql."</p>";
 	$result= mysql_query($sql);
