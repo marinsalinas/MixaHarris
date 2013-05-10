@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 09-05-2013 a las 22:48:28
+-- Tiempo de generación: 10-05-2013 a las 00:44:09
 -- Versión del servidor: 5.5.31
 -- Versión de PHP: 5.4.14
 
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `administrador` (
   `administradorNacimiento` date NOT NULL,
   `administradorTelefono` bigint(20) NOT NULL,
   `administradorEmail` varchar(45) NOT NULL,
+  `administradorPrivilegio` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idadministrador`),
   UNIQUE KEY `idadministrador_UNIQUE` (`idadministrador`),
   UNIQUE KEY `administradorUsername_UNIQUE` (`administradorUsername`)
@@ -60,6 +61,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `clientesOcupacion` varchar(45) NOT NULL,
   `clientesNacimiento` date NOT NULL,
   `clientesSexo` varchar(15) NOT NULL,
+  `clientesPrivilegio` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idclientes`),
   UNIQUE KEY `idclientes_UNIQUE` (`idclientes`),
   UNIQUE KEY `clientesUsername_UNIQUE` (`clientesUsername`)
@@ -69,10 +71,10 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`idclientes`, `clientesNombre`, `clientesApellido`, `clientesDireccion`, `clientesCP`, `clientesEmail`, `clientesTelefono`, `clientesUsername`, `clientesPassword`, `clientesCelular`, `clientesOcupacion`, `clientesNacimiento`, `clientesSexo`) VALUES
-(1, 'Marin', 'Salinas Sánchez', 'Niño Artillero 113, Altamira', 64750, 'm.mslns27@gmail.com', 83592311, 'marinslns', 'efe4c534f51bff41db4c4f07500225f3', 8115780151, 'Estudiante', '1994-01-27', ''),
-(2, 'Andrea Lizbeth', 'Rojas Hernández', 'Condadores #333 Tecnológico Monterrey N.L.', 64700, 'arojas_hdz@hotmail.com', 83403812, 'arojas_hdz', 'arojas1505608', 8114813953, 'Estudiante', '1993-05-04', 'F'),
-(3, 'CibrÃ¡n', 'Samaniego RolÃ³n', 'Pase Lucio 29 Mirador, Monterrey N.L.', 64750, 'CibrnSamaniegoRoln@superrito.com', 83344556, 'evernshoid', '81dc9bdb52d04dc20036dbd8313ed055', 8114567814, 'Keeper', '1958-02-16', 'M');
+INSERT INTO `clientes` (`idclientes`, `clientesNombre`, `clientesApellido`, `clientesDireccion`, `clientesCP`, `clientesEmail`, `clientesTelefono`, `clientesUsername`, `clientesPassword`, `clientesCelular`, `clientesOcupacion`, `clientesNacimiento`, `clientesSexo`, `clientesPrivilegio`) VALUES
+(1, 'Marin', 'Salinas Sánchez', 'Niño Artillero 113, Altamira', 64750, 'm.mslns27@gmail.com', 83592311, 'marinslns', 'efe4c534f51bff41db4c4f07500225f3', 8115780151, 'Estudiante', '1994-01-27', '', 1),
+(2, 'Andrea Lizbeth', 'Rojas Hernández', 'Condadores #333 Tecnológico Monterrey N.L.', 64700, 'arojas_hdz@hotmail.com', 83403812, 'arojas_hdz', 'arojas1505608', 8114813953, 'Estudiante', '1993-05-04', 'F', 1),
+(3, 'CibrÃ¡n', 'Samaniego RolÃ³n', 'Pase Lucio 29 Mirador, Monterrey N.L.', 64750, 'CibrnSamaniegoRoln@superrito.com', 83344556, 'evernshoid', '81dc9bdb52d04dc20036dbd8313ed055', 8114567814, 'Keeper', '1958-02-16', 'M', 1);
 
 -- --------------------------------------------------------
 
