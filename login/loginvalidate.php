@@ -7,11 +7,11 @@ $pass=$_POST['pass'];
 $priv=$_POST['tipoLogin'];
 
 function validUser($usr, $pas){
-	$sql= "SELECT idclientes, clientesNombre, clientesUsername, clientesPassword 
+	$sql= "SELECT idclientes, clientesNombre, clientesUsername, clientesPassword, clientesPrivilegio 
 	FROM clientes WHERE clientesUsername ='$usr' AND clientesPassword = '$pas' LIMIT 1";
 	//echo "<br>".$sql."</br>";
 	$result=mysql_query($sql);
-	while($row=mysql_fetch_object($result)) {
+	while($row=mysql_fetch_object($result)){
 		$usuario = $row;
 	}
 	return $usuario;
