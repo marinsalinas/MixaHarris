@@ -20,6 +20,27 @@ function cliente_list()
 		return $cliente;
 }
 
+
+
+function producto_list()
+{
+	// TABLA CLIENTE
+	$sql= "SELECT *
+	FROM  productos " ;
+	 	$producto= array();
+		$result= mysql_query($sql);
+		$i= 0;
+		while ($row=mysql_fetch_object($result)){
+			$producto[$i]= $row;
+			$i++;
+		}	
+		return $producto;
+}
+
+
+
+
+
 function catalogo_list()
 {
 	//TABLA CATALOGO
@@ -103,6 +124,29 @@ function cliente_fliter($info)
 		}	
 		return $cliente;
 }
+
+
+/*FUNCION DE FILTRO DE PRODUCTO*/
+function producto_filter($info)
+{
+	
+	$sql= "SELECT *
+	FROM  productos
+	WHERE productosNombre LIKE '%$info%' OR productosMarca LIKE '%$info%' OR productosModelo LIKE '%$info%'
+		OR productosDescripcion LIKE '%$info%' OR productosPrecio LIKE '%$info%' OR productosTipo LIKE '%$info%'
+		OR productosGarantia LIKE '%$info%' ";
+	 	//echo "<br>".$sql;
+	 	$producto= array();
+		$result= mysql_query($sql);
+		$i= 0;
+		while ($row=mysql_fetch_object($result)){
+			$producto[$i]= $row;
+			$i++;
+		}	
+		return $producto;
+}
+
+
 
 function proveedor_searchbyproveedor($proveedor)
 {
