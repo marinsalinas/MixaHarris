@@ -2,13 +2,9 @@
 
 require_once ("../lib/reportes_lib.php");
 require_once ("../view/rep_cliente.php");
-
- echo "filtro_cliente.php";
-
+//retorna la tabla resultado de la busqueda moodif//
 $info= $_POST['info'];
-echo $info;
-
-$filter_empresa=cliente_searchbyempresa($info);
-lista_cliente ($filter_empresa);
+$filter_empresa=cliente_fliter($info);
+lista_cliente($filter_empresa);
 
 ?>

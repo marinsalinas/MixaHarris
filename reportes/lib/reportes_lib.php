@@ -1,13 +1,15 @@
 <?php
-echo "1";
-require ('../../config.php');   
-echo "2";
-
+header('content-type text/html charset=utf-8');
+require ('../../config.php');
+/*
+ *La funcion obtiene un arreglo de objetos de la tabla clientes
+ * la he modificado 10/may/2013 marin
+ */
 function cliente_list()
 {
 	// TABLA CLIENTE
 	$sql= "SELECT *
-	FROM  cliente " ;
+	FROM  clientes " ;
 	 	$cliente= array();
 		$result= mysql_query($sql);
 		$i= 0;
@@ -80,13 +82,18 @@ function usuario_list()
 		return $usuario;
 }
 
-
-function cliente_searchbyempresa($empresa)
+//trata de llamarlos así ejem admin_fliter($info)
+function cliente_fliter($info)
 {
-	// TABLA CLIENTE
+	//tuve que modificar el query lo que hara es no solo buscar por empresa sino hacer una busqueda mas
+	//general omitiendo ID, privilegios y password paraque no hay fallas.
 	$sql= "SELECT *
-	FROM  cliente 
-	WHERE empresa='$empresa' " ;
+	FROM  clientes 
+	WHERE clientesNombre LIKE '%$info%' OR clientesApellido LIKE '%$info%' OR clientesDireccion LIKE '%$info%'
+		OR clientesCP LIKE '%$info%' OR clientesEmail LIKE '%$info%' OR clientesTelefono LIKE '%$info%'
+		OR clientesCelular LIKE '%$info%' OR clientesUsername LIKE '%$info%' OR clientesOcupacion LIKE '%$info%'
+		OR clientesNacimiento LIKE '%$info%' OR clientesSexo LIKE '%$info%'";
+	 	//echo "<br>".$sql;
 	 	$cliente= array();
 		$result= mysql_query($sql);
 		$i= 0;
