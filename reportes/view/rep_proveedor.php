@@ -14,6 +14,7 @@ echo "<td>ID</td>";//1
 echo "<td>Proveedor</td>";//2
 echo "<td>Contacto</td>";//3
 echo "<td>Telefono</td>";//4
+echo "<td>Eliminar Registro</td>";
 echo "</tr>";
 
 foreach ($proveedor as $key => $prov) {
@@ -22,6 +23,7 @@ echo "<td>".$prov->idproveedor."</td>";
 echo "<td>".$prov->proveedorNombre."</td>";
 echo "<td>".$prov->proveedorContacto."</td>";
 echo "<td>".$prov->proveedorTelefono."</td>";
+echo "<td>"."<a href=del_proveedor.php?id=".$prov->idproveedor.">Eliminar</a></td>";
 echo "</tr>";	
 }
 echo "</table>";
