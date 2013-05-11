@@ -1,0 +1,4 @@
+1.-proveedor
+2.-filtro_proveedor
+3.-rep_proveedor
+Hay varios que son parecidos pero son los de la clase para que no te confundas.

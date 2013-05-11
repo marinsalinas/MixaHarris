@@ -24,7 +24,7 @@ function cliente_list()
 
 function producto_list()
 {
-	// TABLA CLIENTE
+	// TABLA PRODUCTO
 	$sql= "SELECT *
 	FROM  productos " ;
 	 	$producto= array();
@@ -36,8 +36,6 @@ function producto_list()
 		}	
 		return $producto;
 }
-
-
 
 
 
@@ -77,7 +75,7 @@ function proveedores_list()
 {
 	//TABLA PROVEEDORES
 	$sql= "SELECT *
-	FROM  proveedores" ;
+	FROM  proveedor " ;
 	 	$proveedor= array();
 		$result_prov= mysql_query($sql);
 		$i= 0;
@@ -146,6 +144,24 @@ function producto_filter($info)
 		return $producto;
 }
 
+
+/*FUNCION DE FILTRO DE PROVEEDORES*/
+function proveedor_filter($info)
+{
+	
+	$sql= "SELECT *
+	FROM  proveedor
+	WHERE proveedorNombre LIKE '%$info%' OR proveedorContacto LIKE '%$info%' OR proveedorTelefono LIKE '%$info%'";
+	 	//echo "<br>".$sql;
+	 	$proveedor= array();
+		$result= mysql_query($sql);
+		$i= 0;
+		while ($row=mysql_fetch_object($result)){
+			$proveedor[$i]= $row;
+			$i++;
+		}	
+		return $proveedor;
+}
 
 
 function proveedor_searchbyproveedor($proveedor)
