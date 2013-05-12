@@ -15,10 +15,10 @@
 			<tr><td>Nombre de Usuario:</td><td><input type='text' name='username'/></td></tr>
 			<tr><td>Contrase&ntilde;a:</td><td><input type='password' name='pass'/></td></tr>
 			<tr><td>Direcci&oacute;n:</td><td><input type='text' name='direccion'/></td></tr>
-			<tr><td>C&oacute;digo Postal:</td><td><input type='text' name='CP'/></td></tr>
-			<tr><td>Email:</td><td><input type='text' name='email'/></td></tr>
-			<tr><td>Tel&eacute;fono:</td><td><input type='text' name='tel'/></td></tr>
-			<tr><td>M&oacute;vil:</td><td><input type='text' name='cel'/></td></tr>
+			<tr><td>C&oacute;digo Postal:</td><td><input type='number' name='CP'/></td></tr>
+			<tr><td>Email:</td><td><input type='email' name='email'/></td></tr>
+			<tr><td>Tel&eacute;fono:</td><td><input type='number' name='tel'/></td></tr>
+			<tr><td>M&oacute;vil:</td><td><input type='number' name='cel'/></td></tr>
 			<tr><td>Ocupaci&oacute;n:</td><td><input type='text' name='ocupacion'/></td></tr>
 			<tr><td>Fecha de Nacimiento:</td>
 				<td>

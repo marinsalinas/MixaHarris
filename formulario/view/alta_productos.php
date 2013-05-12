@@ -13,8 +13,8 @@
 			<tr><td>Nombre de Producto:</td><td><input type='text' name='nombre'/></td></tr>
 			<tr><td>Marca:</td><td><input type='text' name='marca'/></td></tr>
 			<tr><td>Modelo:</td><td><input type='text' name='modelo'/></td></tr>
-			<tr><td>Descripcion:</td><td><input type='text' name='descripcion'/></td></tr>
-			<tr><td>Precio:</td><td><input type='text' name='precio'/></td></tr>
+			<tr><td>Descripci&oacute;n:</td><td><input type='text' name='descripcion'/></td></tr>
+			<tr><td>Precio:</td><td><input type='number' name='precio'/></td></tr>
 			<tr><td>Tipo:</td><td><input type='text' name='tipo'/></td></tr>
 			<tr><td>Garantia:</td>
 				<td><input type='radio' name='garantia' value='1' />Si

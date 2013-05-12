@@ -14,8 +14,8 @@
 			<tr><td>Apellido(s):</td><td><input type='text' name='apellidos'/></td></tr>
 			<tr><td>Nombre de Usuario:</td><td><input type='text' name='username'/></td></tr>
 			<tr><td>Contrase&ntilde;a:</td><td><input type='password' name='pass'/></td></tr>
-			<tr><td>Tel&eacute;fono:</td><td><input type='text' name='tel'/></td></tr>
-			<tr><td>Email:</td><td><input type='text' name='email'/></td></tr>
+			<tr><td>Tel&eacute;fono:</td><td><input type='number' name='tel'/></td></tr>
+			<tr><td>Email:</td><td><input type='email' name='email'/></td></tr>
 			<tr><td>Fecha de Nacimiento:</td>
 				<td>
 					<?php
