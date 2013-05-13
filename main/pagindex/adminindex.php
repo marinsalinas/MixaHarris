@@ -7,14 +7,15 @@
 <body>
 	<?php
 	session_start();
-	require_once("../login/valid.php");
-	require_once("../login/validpriv.php");
+	//lo mismo
+	require_once("../../login/valid.php");
+	require_once("../../login/validpriv.php");
 	validAdmin();
-	echo "<h1>MixaHarris - Admin Index </h1>";
+	echo "<h1>MixaHarris - Admin Index Nuevo </h1>";
 	$admin = $_SESSION['usuario'];
 	//print_r($usuario);
 		echo"<p>"."Bienvenido ".$admin->administradorNombre;
 	?>
-	<a href="../login/logout.php">Logout</a></p>
+	<a href="../../login/logout.php">Logout</a></p>
 </body>
 </html>

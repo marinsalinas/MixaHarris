@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+	<?php
+	session_start();
+	require_once("../../login/valid.php");
+	require_once("../../login/validpriv.php");
+	require_once("../lib/edit_lib.php");
+	$idusr=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
+	$usrModif = selectClienteConID($idusr);
+	echo"<pre>";
+	print_r($usrModif);
+	echo"</pre>";
+	?>
+	<meta charset='utf-8'/>
+	<meta name='description' content=''/>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+<title>MixaHarris - Formulario Clientes</title>
+<body>
+	<h1>Modificar Registro del Ciente</h1>
+	<table>
+		<form name='editClientes' action="../action/save_clientesEdit.php" method='post' accept-charset='utf-8'>
+			<tr><td>Nombre(s):</td><td>
+				<input type='text' name='nombre' value=<?php echo "'".$usrModif->clientesNombre."'"; ?>/></td></tr>
+			<tr><td>Apellido(s):</td><td>
+				<input type='text' name='apellidos' value=<?php echo "'".$usrModif->clientesApellido."'"; ?>/></td></tr>
+			<tr><td>Nombre de Usuario:</td><td>
+				<input type='text' name='username' value=<?php echo "'".$usrModif->clientesUsername."'"; ?>/></td></tr>
+			<tr><td>Contrase&ntilde;a:</td><td><input type='password' name='pass'/></td></tr>
+			<tr><td>Direcci&oacute;n:</td><td>
+				<input type='text' name='direccion' value=<?php echo "'".$usrModif->clientesDireccion."'";?>/></td></tr>
+			<tr><td>C&oacute;digo Postal:</td><td>
+				<input type='number' name='CP' value=<?php echo "'".$usrModif->clientesCP."'"; ?>/></td></tr>
+			<tr><td>Email:</td><td>
+				<input type='email' name='email' value=<?php echo "'".$usrModif->clientesEmail."'"; ?>/></td></tr>
+			<tr><td>Tel&eacute;fono:</td><td>
+				<input type='number' name='tel' value=<?php echo "'".$usrModif->clientesTelefono."'"; ?>/></td></tr>
+			<tr><td>M&oacute;vil:</td><td>
+				<input type='number' name='cel' value=<?php echo "'".$usrModif->clientesMovil."'"; ?>/></td></tr>
+			<tr><td>Ocupaci&oacute;n:</td><td>
+				<input type='text' name='ocupacion' value=<?php echo "'".$usrModif->clientesOcupacion."'";?>/></td></tr>
+			<tr><td>Fecha de Nacimiento:</td>
+				<td>
+					<?php
+					/*Script PHP el cual nos ayuda a llenar mas rapidamente los dropdown-list*/
+					echo"<select name='dia'>\n";
+					echo"<option value='-1'>D&iacute;a:</option>\n";
+					
+					$meses= array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+						for ($i=1; $i <= 31; $i++) { 
+						echo"<option value='".$i."'>".$i."</option>\n";
+						}
+					echo"</select>\n";
+					echo"<select name='mes'>\n";
+					echo"<option value='-1'>Mes:</option>\n";
+					$i=1;
+					foreach ($meses as $key => $mes) {
+					echo"<option value='".$i."'>".$mes."</option>\n"; $i++;
+					}
+					echo"</select>\n";
+					echo"<select name='anio'>\n";
+					echo"<option value='-1'>A&ntilde;o:</option>\n";
+						for ($i=date("Y"); $i>=1900; $i--) {
+							echo"<option value='".$i."'>".$i."</option>\n";
+						}
+					echo"</select>\n";
+					?>	
+				</td>
+			</tr>
+			<tr><td>Sexo:</td>
+				<td><input type='radio' name='sexo' value='F' />Mujer
+				<input type='radio' name='sexo' value='M' />Hombre</td>
+			</tr>
+			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+		</form>
+	</table>
+</body>
+</hmtl>
