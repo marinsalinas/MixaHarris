@@ -6,9 +6,9 @@
 	require_once("../../login/valid.php");
 	require_once("../../login/validpriv.php");
 	require_once("../lib/edit_lib.php");
-	validUser();
-	$idusr=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
-	$usrModif = selectClienteConID($idusr);
+	validAdmin();
+	$idadmin=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
+	//$adModif = selectClienteConID($idusr);
 	/*echo"<pre>";
 	print_r($usrModif);
 	echo"</pre>";*/
@@ -20,8 +20,8 @@
 <body>
 	<h1>Se obtuvieron los datos para modificar</h1>
 	<?php
-	$clienteModif=array();
-	$datosCliente= array("nombre","apellidos", "direccion","CP","email", "tel", "username", "cel", "ocupacion",
+	$adminModif=array();
+	$datosAdmin= array("nombre","apellidos", "direccion","CP","email", "tel", "username", "cel", "ocupacion",
 	 "sexo");//se obtiene de los names del formulario
 	foreach($datosCliente as $key => $datoCliente){
 	$clienteModif[]= $_POST[$datoCliente];

@@ -16,9 +16,9 @@
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
-<title>MixaHarris - Formulario Clientes</title>
+<title>MixaHarris - Formulario Administrador</title>
 <body>
-	<h1>Modificar Registro del Ciente</h1>
+	<h1>Modificar Registro del Administrador</h1>
 	<table>
 		<form name='editAdmin' action="../action/save_adminEdit.php" method='post' accept-charset='utf-8'>
 			<tr><td>Nombre(s):</td><td>
