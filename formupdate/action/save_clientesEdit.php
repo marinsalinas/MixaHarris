@@ -20,13 +20,6 @@
 <body>
 	<h1>Se obtuvieron los datos para modificar</h1>
 	<?php
-	/*session_start();
-	header('Content-Type: text/html; charset=UTF-8');
-	require_once("../../login/valid.php");
-	require_once("../../login/validpriv.php");
-	require_once( '../lib/edit_lib.php');
-	//validUser();*/
-
 	$clienteModif=array();
 	$datosCliente= array("nombre","apellidos", "direccion","CP","email", "tel", "username", "cel", "ocupacion",
 	 "sexo");//se obtiene de los names del formulario
