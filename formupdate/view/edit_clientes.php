@@ -6,6 +6,7 @@
 	require_once("../../login/valid.php");
 	require_once("../../login/validpriv.php");
 	require_once("../lib/edit_lib.php");
+	validUser();
 	$idusr=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
 	$usrModif = selectClienteConID($idusr);
 	/*echo"<pre>";
@@ -60,26 +61,17 @@
 				$i=1;
 				foreach ($meses as $key => $mes) {
 					if($i == $nac[1])
-					{
-						echo"<option value='".$i."' selected>".$mes."</option>\n"; $i++;
-					}	
-					else
-					{
-						echo"<option value='".$i."'>".$mes."</option>\n"; $i++;
-					}
+					{echo"<option value='".$i."' selected>".$mes."</option>\n"; $i++;}	
+					else{echo"<option value='".$i."'>".$mes."</option>\n"; $i++;}
 				}
 				echo"</select>\n";
 				echo"<select name='anio'>\n";
 				echo"<option value='-1'>A&ntilde;o:</option>\n";
 				for ($i=date("Y"); $i>=1900; $i--) {
-					if($i == $nac[0])
-					{
-						echo"<option value='".$i."' selected>".$i."</option>\n";
-					}
-					else
-					{
-						echo"<option value='".$i."'>".$i."</option>\n";
-					}
+					if($i == $nac[0]){
+						echo"<option value='".$i."' selected>".$i."</option>\n";}
+					else{
+						echo"<option value='".$i."'>".$i."</option>\n";}
 				}
 				echo"</select>\n";
 				?>	
@@ -95,6 +87,10 @@
 				echo "<td>"."<input type='radio' name='sexo' value='F'/>Mujer\n";
 				echo "<input type='radio' name='sexo' value='M' checked/>Hombre</td>\n";
 				}
+
+				/* **NOTA** la vida de un Script de php  vive por archivo por eso puedes abrir y cerrar en
+				 *			varias ocaciones de tal forma que vuelve mas entendible el código
+				 */
 				?>
 			</tr>
 			<tr><td><input type='submit'value='Aceptar'/></td></tr>
