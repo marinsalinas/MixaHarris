@@ -50,14 +50,14 @@ if($priv == 1){
 	$usuario=validUser($user, $pass);
 		if(!empty($usuario)){
 			$_SESSION['usuario'] = $usuario;
-			header('Location: ../main/Index.php');	
+			header('Location: ../main/pagindex/userindex.php');	
 		}else{echo htmlentities("Usuario o contraseña no válidos - User");}
 }
 if ($priv == 0) {
 	$admin=validAdmin($user, $pass);
 		if(!empty($admin)){
 			$_SESSION['usuario'] = $admin;
-			header('Location: ../main/AdminIndex.php');	
+			header('Location: ../main/pagindex/adminindex.php');	
 		}else{echo htmlentities("Usuario o contraseña no válidos - Admin");}
 }
 

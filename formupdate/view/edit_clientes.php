@@ -40,50 +40,49 @@
 				<input type='text' name='ocupacion' value=<?php echo "'".$usrModif->clientesOcupacion."'";?>/></td></tr>
 			<tr><td>Fecha de Nacimiento:</td>
 				<td>
-					<?php
-					/*Script PHP el cual nos ayuda a llenar mas rapidamente los dropdown-list*/
-					$nac = array();
-					$nac =explode("-", $usrModif->clientesNacimiento);
-					echo"<select name='dia'>\n";
-					echo"<option value='-1'>D&iacute;a:</option>\n";
+				<?php
+				/*Script PHP el cual nos ayuda a llenar mas rapidamente los dropdown-list*/
+				$nac = array();
+				$nac =explode("-", $usrModif->clientesNacimiento);
+				echo"<select name='dia'>\n";
+				echo"<option value='-1'>D&iacute;a:</option>\n";
 					
-					$meses= array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
-						for ($i=1; $i <= 31; $i++) { 
-						if($i == $nac[2])//condicion para la opcion selecionada
-							echo"<option value='".$i."' selected>".$i."</option>\n";
-						else
-							echo"<option value='".$i."'>".$i."</option>\n";
-						
-						}
-					echo"</select>\n";
-					echo"<select name='mes'>\n";
-					echo"<option value='-1'>Mes:</option>\n";
-					$i=1;
-					foreach ($meses as $key => $mes) {
-						if($i == $nac[1])
-						{
-							echo"<option value='".$i."' selected>".$mes."</option>\n"; $i++;
-						}	
-						else
-						{
-							echo"<option value='".$i."'>".$mes."</option>\n"; $i++;
-						}
+				$meses= array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+				for ($i=1; $i <= 31; $i++) { 
+				if($i == $nac[2])//condicion para la opcion selecionada
+					echo"<option value='".$i."' selected>".$i."</option>\n";
+				else
+					echo"<option value='".$i."'>".$i."</option>\n";		
+				}
+				echo"</select>\n";
+				echo"<select name='mes'>\n";
+				echo"<option value='-1'>Mes:</option>\n";
+				$i=1;
+				foreach ($meses as $key => $mes) {
+					if($i == $nac[1])
+					{
+						echo"<option value='".$i."' selected>".$mes."</option>\n"; $i++;
+					}	
+					else
+					{
+						echo"<option value='".$i."'>".$mes."</option>\n"; $i++;
 					}
-					echo"</select>\n";
-					echo"<select name='anio'>\n";
-					echo"<option value='-1'>A&ntilde;o:</option>\n";
-						for ($i=date("Y"); $i>=1900; $i--) {
-							if($i == $nac[0])
-							{
-								echo"<option value='".$i."' selected>".$i."</option>\n";
-							}
-							else
-							{
-								echo"<option value='".$i."'>".$i."</option>\n";
-							}
-						}
-					echo"</select>\n";
-					?>	
+				}
+				echo"</select>\n";
+				echo"<select name='anio'>\n";
+				echo"<option value='-1'>A&ntilde;o:</option>\n";
+				for ($i=date("Y"); $i>=1900; $i--) {
+					if($i == $nac[0])
+					{
+						echo"<option value='".$i."' selected>".$i."</option>\n";
+					}
+					else
+					{
+						echo"<option value='".$i."'>".$i."</option>\n";
+					}
+				}
+				echo"</select>\n";
+				?>	
 				</td>
 			</tr>
 			<tr><td>Sexo:</td>

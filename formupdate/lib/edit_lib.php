@@ -20,4 +20,22 @@ function selectClienteConID($idCliente)
 		}	
 		return $cliente;
 }
+
+function updateClienteConID($clientesModif, $idCliente)
+{
+ $sql = "UPDATE clientes SET clientesNombre='$clientesModif[0]', clientesApellido='$clientesModif[1]',
+ 		 clientesDireccion='$clientesModif[2]', clientesCP = '$clientesModif[3]', clientesEmail = '$clientesModif[4]',
+ 		 clientesTelefono = '$clientesModif[5]', clientesUsername = '$clientesModif[6]',
+ 		 clientesCelular = '$clientesModif[7]', clientesOcupacion = '$clientesModif[8]',
+ 		 clientesSexo = '$clientesModif[9]', clientesNacimiento ='$clientesModif[10]' WHERE idclientes= '$idCliente'";
+// echo "<br>".$sql;
+$result= mysql_query($sql);
+	if ($result >0){
+		echo "Se ha ingresado la informacion exitosamente";
+	}
+	else {
+		echo  "Existe una inconsistencia en informacion";
+	}		 
+
+}
 ?>

@@ -1,4 +1,4 @@
-<?php
+	<?php
 //Valida que sea administrador si no lo es manda a la página blockpage.php
 function validAdmin(){
 	$user=$_SESSION['usuario'];
@@ -11,7 +11,7 @@ function validAdmin(){
 	//echo "<br>";
 	//print_r($privilegio);
 	if($privilegio == 1){
-		header('Location: ../login/blockpage.php');
+		header('Location: ../../login/blockpage.php');
 		echo "HOLAAA<br>";
 	}
 }
@@ -24,10 +24,10 @@ function validUser(){
 	foreach ($user as $key => $atrib) {
 		$privilegio = $atrib;
 	}
-	echo "<br>";
-	print_r($privilegio);
+	//echo "<br>";
+	//print_r($privilegio);
 	if($privilegio == 0){
-		header('Location: ../login/blockpage.php');
+		header('Location: ../../login/blockpage.php');
 	}
 }
 ?>

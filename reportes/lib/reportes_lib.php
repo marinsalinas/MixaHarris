@@ -1,9 +1,9 @@
 <?php
 header('content-type text/html charset=utf-8');
 require ('../../config.php');
-/*
- *La funcion obtiene un arreglo de objetos de la tabla clientes
- * la he modificado 10/may/2013 marin
+/**
+ *La funcion cliente_list()
+ *@return un arreglo de objetos de referencia al cliente
  */
 function cliente_list()
 {

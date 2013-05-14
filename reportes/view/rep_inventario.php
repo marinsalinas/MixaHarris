@@ -1,5 +1,6 @@
 <?php
-
+//Esta se me dificulta por que tienes 3 llaves primarias que solo deberia tener 2
+// que es el id del movimiento y el id en relacion con el producto - Marin /11/mayo
 echo "rep_inventario";
 function lista_inventario ($inventario){
 	
@@ -7,16 +8,16 @@ echo "FUNCION/ACTIVA";
 
 echo "<table border=1>";
 echo "<tr>";
-echo "<td>id</td>"; 
-echo "<td>movimiento</td>";
-echo "<td>cantidad</td>";
+echo "<td>ID</td>"; 
+echo "<td>Movimiento</td>";
+echo "<td>Cantidad</td>";
 echo "</tr>";
 
 foreach ($inventario as $key => $inv) {
 echo "<tr>";
-echo "<td>".$inv->id_producto."</td>"; 
+echo "<td>".$inv->id_prooducto."</td>"; 
 echo "<td>".$inv->movimiento."</td>";
-echo "<td>".$inv->cantidad."</td>";
+echo "<td>".$inv->canetidad."</td>";
 echo "</tr>";
 
 }
