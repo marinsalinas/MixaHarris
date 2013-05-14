@@ -21,6 +21,21 @@ function selectClienteConID($idCliente)
 		return $cliente;
 }
 
+function selectAdminConID($idAdmin)
+{
+	$sql = "SELECT *
+			FROM administrador WHERE idadministrador = '$idAdmin'";
+		//echo $sql."<br>";
+		$admin = null;
+		$result = mysql_query($sql);
+		$i= 0;
+		while ($row=mysql_fetch_object($result)){
+			$admin = $row;
+			$i++;
+		}
+		return $admin;
+}
+
 function updateClienteConID($clientesModif, $idCliente)
 {
  $sql = "UPDATE clientes SET clientesNombre='$clientesModif[0]', clientesApellido='$clientesModif[1]',

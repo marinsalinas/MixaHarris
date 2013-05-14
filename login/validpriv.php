@@ -26,7 +26,7 @@ function validUser(){
 	}
 	//echo "<br>";
 	//print_r($privilegio);
-	if($privilegio == 0){
+	if($privilegio != 1){
 		header('Location: ../../login/blockpage.php');
 	}
 }

@@ -20,13 +20,14 @@
 	}
 	$admin[]=$_POST['anio']."-".$_POST['mes']."-".$_POST['dia'];//Concatena para tener el formato "YYYY-mm-dd" para MySQL
 	$admin[]=md5($_POST['pass']);
+	$admin[] = $_POST['sexo'];
 	//echo"<pre>\n";
 		//print_r($admin);
 	//echo"</pre\n>";
 
 	//El primer paso es contruir la instruccion en mysql se construye a partir de los datos del arreglo $cliente[];
-	$sql = "INSERT INTO mixaharris.administrador (idadministrador, administradorNombre, administradorApellido, administradorUsername, administradorTelefono, administradorEmail, administradorNacimiento, administradorPassword)
-	 VALUES (NULL, '$admin[0]', '$admin[1]', '$admin[2]', '$admin[3]', '$admin[4]', '$admin[5]', '$admin[6]');";
+	$sql = "INSERT INTO mixaharris.administrador (idadministrador, administradorNombre, administradorApellido, administradorUsername, administradorTelefono, administradorEmail, administradorNacimiento, administradorPassword, administradorSexo)
+	 VALUES (NULL, '$admin[0]', '$admin[1]', '$admin[2]', '$admin[3]', '$admin[4]', '$admin[5]', '$admin[6]', '$admin[7]');";
 	//echo "<p>".$sql."</p>";
 	$result= mysql_query($sql);
 	if ($result >0){

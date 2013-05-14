@@ -43,6 +43,9 @@
 					echo"</select>\n";
 					?>	
 				</td>
+			<tr>
+				<tr><td>Sexo: </td><td><input type='radio' name='sexo' value='F'/>Mujer
+				<input type='radio' name='sexo' value='M' />Hombre</td>
 			</tr>
 
 			<tr><td><input type='submit'value='Aceptar'/></td></tr>
