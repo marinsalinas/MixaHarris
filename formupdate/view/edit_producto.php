@@ -1,10 +1,10 @@
 <?php
 require_once("../lib/edit_lib.php");
 echo $_GET['id']."<br>";
-$productoModif= selectProductoConID($_GET['id']);
+$prodModif= selectProductoConID($_GET['id']);
 
 echo "<pre>";
-print_r($productoModif);
+print_r($prodModif);
 echo "</pre>";
 ?>
 <!DOCTYPE html>
@@ -19,25 +19,43 @@ echo "</pre>";
 	<h1>Formularios Productos</h1>
 	<table>
 		<form name='UpdateProductos' action="../action/save_productosEdit.php" method='post' accept-charset='utf-8'>
-			<input type='hidden' value=<?php echo "'".$productoModif->idproductos."'" ?> >
-			<tr><td>Nombre de Producto:</td><td><input type='text' name='nombre'/></td></tr>
-			<tr><td>Marca:</td><td><input type='text' name='marca'/></td></tr>
-			<tr><td>Modelo:</td><td><input type='text' name='modelo'/></td></tr>
-			<tr><td>Descripci&oacute;n:</td><td><input type='text' name='descripcion'/></td></tr>
-			<tr><td>Precio:</td><td><input type='number' name='precio'/></td></tr>
-			<tr><td>Tipo:</td><td><input type='text' name='tipo'/></td></tr>
+			<input type='hidden' name ='id' value=<?php echo "'".$prodModif->idproductos."'" //es para el id ?> />
+			<tr><td>Nombre de Producto:</td><td>
+				<input type='text' name='nombre' value=<?php echo "'".$prodModif->productosNombre."'"?>/></td></tr>
+			<tr><td>Marca:</td><td>
+				<input type='text' name='marca' value=<?php echo "'".$prodModif->productosMarca."'"?>/></td></tr>
+			<tr><td>Modelo:</td><td>
+				<input type='text' name='modelo' value=<?php echo "'".$prodModif->productosModelo."'"?>/></td></tr>
+			<tr><td>Descripci&oacute;n:</td><td>
+				<input type='text' name='descripcion' value=<?php echo "'".$prodModif->productosDescripcion."'"?>/></td></tr>
+			<tr><td>Precio:</td><td><input type='text' name='precio' value=<?php echo "'".$prodModif->productosPrecio."'"?>/></td></tr>
+			<tr><td>Tipo:</td><td><input type='text' name='tipo' value=<?php echo "'".$prodModif->productosTipo."'"?>/></td></tr>
 			<tr><td>Garantia:</td>
-				<td><input type='radio' name='garantia' value='1' />Si
-				<input type='radio' name='garantia' value='0' />No</td>
+				<?php
+				if($prodModif == 1){
+				echo "<td><input type='radio' name='garantia' value='1' checked/>Si";
+				echo "<input type='radio' name='garantia' value='0' />No</td>";
+				} elseif ($prodModif == 0){
+					echo "<td><input type='radio' name='garantia' value='1'/>Si";
+				echo "<input type='radio' name='garantia' value='0' checked/>No</td>";
+				}else{
+					echo "<td><input type='radio' name='garantia' value='1'/>Si";
+				echo "<input type='radio' name='garantia' value='0' />No</td>";
+				}
+				?>
 			</tr>
 			<tr><td>Proveedor:</td><td>
 				<select name='proveedor'>
+					<option value ='-1'>Selecciona un proveedor</option>
 					<?php
-					require_once('../lib/formularios_lib.php');
+					require_once('../../formulario/lib/formularios_lib.php');
 					$pro = drop_proveedores();
 					foreach($pro as $key =>$prv){
-						echo "<option value ='{$prv->idproveedor}'>{$prv->proveedorNombre}</option>";
-					}
+						if ($prv->idproveedor == $prodModif->proveedor_idproveedor){
+							echo "<option value ='{$prv->idproveedor}' selected>{$prv->proveedorNombre}</option>";}
+						else{
+							echo "<option value ='{$prv->idproveedor}'>{$prv->proveedorNombre}</option>";}
+					}// esto nos ayuda e elegir el proveedor...
 					?>
 				</select>
 				</td>
