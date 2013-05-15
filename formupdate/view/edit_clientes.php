@@ -87,7 +87,6 @@
 				echo "<td>"."<input type='radio' name='sexo' value='F'/>Mujer\n";
 				echo "<input type='radio' name='sexo' value='M' checked/>Hombre</td>\n";
 				}
-
 				/* **NOTA** la vida de un Script de php  vive por archivo por eso puedes abrir y cerrar en
 				 *			varias ocaciones de tal forma que vuelve mas entendible el código
 				 */
