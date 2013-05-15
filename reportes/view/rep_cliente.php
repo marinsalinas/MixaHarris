@@ -23,6 +23,7 @@ echo "<td>Sexo</td>";//10
 echo "<td>Ocupaci&oacute;n</td>";//11 Ocupacion
 echo "<td>Username</td>";//12
 echo "<td>Eliminar Registro</td>";
+echo "<td>Editar Registro</td>";
 echo "</tr>";
 
 foreach ($cliente as $key => $client) {
@@ -40,6 +41,7 @@ echo "<td>".$client->clientesSexo."</td>";
 echo "<td>".$client->clientesOcupacion."</td>";
 echo "<td>".$client->clientesUsername."</td>";
 echo "<td>"."<a href=del_cliente.php?id=".$client->idclientes.">Eliminar</a></td> ";
+echo "<td>"."<a href=../../formupdate/view/edit_clienteRep.php?id=".$client->idclientes.">Editar</a></td> ";
 echo "</tr>";	
 }
 echo "</table>";
