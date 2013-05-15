@@ -53,4 +53,20 @@ $result= mysql_query($sql);
 	}		 
 
 }
+
+function UpdateAdminConID($adminModif, $idAdmin)
+{
+ $sql = "UPDATE administrador SET administradorNombre='$adminModif[0]', administradorApellido='$adminModif[1]',
+ 		administradorUsername = '$adminModif[2]', administradorEmail = '$adminModif[3]', administradorTelefono = '$adminModif[4]', 
+ 		administradorSexo = '$adminModif[5]', administradorNacimiento ='$adminModif[6]' WHERE idadministrador= '$idAdmin'";
+// echo "<br>".$sql;
+$result= mysql_query($sql);
+	if ($result >0){
+		echo "Se ha ingresado la informacion exitosamente".mysql_info();
+	}
+	else {
+		echo  "Existe una inconsistencia en informacion";
+	}
+
+}
 ?>

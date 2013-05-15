@@ -9,9 +9,6 @@
 	validAdmin();
 	$adminID =  $_SESSION['usuario']->idadministrador; //este es el valor del id del administrador en esta sesion
 	$adModif = selectAdminConID($adminID);
-	echo"<pre>";
-	print_r($adModif);
-	echo"</pre>";
 	?>
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>

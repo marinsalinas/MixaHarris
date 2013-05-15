@@ -21,18 +21,17 @@
 	<h1>Se obtuvieron los datos para modificar</h1>
 	<?php
 	$adminModif=array();
-	$datosAdmin= array("nombre","apellidos", "direccion","CP","email", "tel", "username", "cel", "ocupacion",
-	 "sexo");//se obtiene de los names del formulario
-	foreach($datosCliente as $key => $datoCliente){
-	$clienteModif[]= $_POST[$datoCliente];
+	$datosAdmin= array("nombre","apellidos", "username","email", "tel","sexo");//se obtiene de los names del formulario
+	foreach($datosAdmin as $key => $datoadmin){
+	$adminModif[]= $_POST[$datoadmin];
 	}
-	$clienteModif[]=$_POST['anio']."-".$_POST['mes']."-".$_POST['dia'];//Concatena para tener el formato "YYYY-mm-dd" para BD
+	$adminModif[]=$_POST['anio']."-".$_POST['mes']."-".$_POST['dia'];//Concatena para tener el formato "YYYY-mm-dd" para BD
 	
 	/*echo "<pre>";
-	print_r($clienteModif);
-	echo "</pre>";*/
-	echo "<p>";
-	updateClienteConID($clienteModif, $_SESSION['usuario']->idclientes);
+	print_r($adminModif);
+	echo "</pre>";
+	echo "<p>";*/
+	updateAdminConID($adminModif, $_SESSION['usuario']->idadministrador);
 	echo"<p>";
 	?>	
 </body>
