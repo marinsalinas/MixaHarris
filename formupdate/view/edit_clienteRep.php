@@ -16,7 +16,7 @@ echo "</pre>";*/
 <body>
 	<h1>Modificar Registro del Ciente</h1>
 	<table>
-		<form name='editClientes' action="../action/save_clientesEditRep.php" method='post' accept-charset='utf-8'>
+		<form name='editClientesRep' action="../action/save_clientesEditRep.php" method='post' accept-charset='utf-8'>
 			<tr><td>Nombre(s):</td><td>
 				<input type='text' name='nombre' value=<?php echo "'".$usrModif->clientesNombre."'"; ?>/></td></tr>
 			<tr><td>Apellido(s):</td><td>

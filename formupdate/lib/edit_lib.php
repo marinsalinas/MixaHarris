@@ -13,10 +13,8 @@ function selectClienteConID($idCliente)
 	 	//echo $sql;
 	 	$cliente= null;
 		$result= mysql_query($sql);
-		$i= 0;
 		while ($row=mysql_fetch_object($result)){
 			$cliente= $row;
-			$i++;
 		}	
 		return $cliente;
 }
@@ -28,12 +26,23 @@ function selectAdminConID($idAdmin)
 		//echo $sql."<br>";
 		$admin = null;
 		$result = mysql_query($sql);
-		$i= 0;
 		while ($row=mysql_fetch_object($result)){
 			$admin = $row;
-			$i++;
 		}
 		return $admin;
+}
+
+function selectProductoConID($idProducto)
+{
+	$sql = "SELECT *
+			FROM productos WHERE idproductos = '$idProducto'";
+		//echo $sql."<br>";
+		$producto = null;
+		$result = mysql_query($sql);
+		while ($row=mysql_fetch_object($result)){
+			$producto = $row;
+		}
+		return $producto;
 }
 
 function updateClienteConID($clientesModif, $idCliente)

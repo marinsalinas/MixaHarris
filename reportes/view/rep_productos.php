@@ -18,7 +18,8 @@ echo "<td>Descripcion</td>";//5
 echo "<td>Precio</td>";//6
 echo "<td>Tipo</td>";//7 
 echo "<td>Garantia</td>";//8 
-echo "<td>Eliminar Registro<td>";
+echo "<td>Eliminar Registro</td>";
+echo "<td>Editar Registro</td>";
 echo "</tr>";
 
 foreach ($producto as $key => $prod) {
@@ -32,6 +33,7 @@ echo "<td>".$prod->productosPrecio."</td>";
 echo "<td>".$prod->productosTipo."</td>";
 echo "<td>".$prod->productosGarantia."</td>";
 echo "<td>"."<a href=del_producto.php?id=".$prod->idproductos.">Eliminar</a></td> ";
+echo "<td>"."<a href=../../formupdate/view/edit_producto.php?id=".$prod->idproductos.">Editar</a></td>";
 echo "</tr>";	
 }
 echo "</table>";
