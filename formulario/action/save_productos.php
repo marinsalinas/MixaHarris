@@ -14,12 +14,10 @@
 	require_once( '../lib/formularios_lib.php');
 
 	$producto=array();
-	$datosProducto = array("nombre","marca","modelo","descripcion","precio","tipo");//se obtiene de los names del formulario
+	$datosProducto = array("nombre","marca","modelo","descripcion","precio","tipo", "garantia", "proveedor");//se obtiene de los names del formulario
 	foreach($datosProducto as $key => $datoProducto){
 	$producto[] = $_POST[$datoProducto];
 	}
-	$producto[] = $_POST['garantia'];
-	$producto[] = $_POST['proveedor'];
 	echo"<pre>\n";
 		print_r($producto);
 	echo"</pre\n>";

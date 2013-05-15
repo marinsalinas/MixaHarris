@@ -1,11 +1,7 @@
 <?php
 require_once("../lib/edit_lib.php");
-echo $_GET['id']."<br>";
+require_once('../../formulario/lib/formularios_lib.php');
 $prodModif= selectProductoConID($_GET['id']);
-
-echo "<pre>";
-print_r($prodModif);
-echo "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang='es'>
@@ -16,7 +12,7 @@ echo "</pre>";
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
 <title>MixaHarris - Editar Productos</title>
 <body>
-	<h1>Formularios Productos</h1>
+	<h1>Formularios para Modificar Productos</h1>
 	<table>
 		<form name='UpdateProductos' action="../action/save_productosEdit.php" method='post' accept-charset='utf-8'>
 			<input type='hidden' name ='id' value=<?php echo "'".$prodModif->idproductos."'" //es para el id ?> />
@@ -48,14 +44,14 @@ echo "</pre>";
 				<select name='proveedor'>
 					<option value ='-1'>Selecciona un proveedor</option>
 					<?php
-					require_once('../../formulario/lib/formularios_lib.php');
+					//como ya hice al principio el require no es necesario volverlo a hacer para la funcion de drop
 					$pro = drop_proveedores();
 					foreach($pro as $key =>$prv){
 						if ($prv->idproveedor == $prodModif->proveedor_idproveedor){
 							echo "<option value ='{$prv->idproveedor}' selected>{$prv->proveedorNombre}</option>";}
 						else{
 							echo "<option value ='{$prv->idproveedor}'>{$prv->proveedorNombre}</option>";}
-					}// esto nos ayuda e elegir el proveedor...
+					}// esto nos ayuda e elegir el proveedor... de manera automatizada
 					?>
 				</select>
 				</td>

@@ -76,6 +76,21 @@ $result= mysql_query($sql);
 	else {
 		echo  "Existe una inconsistencia en informacion";
 	}
+}
 
+function UpdateProductoConID($prodModif, $idProd)
+{
+ $sql = "UPDATE productos SET productosNombre='$prodModif[0]', productosMarca='$prodModif[1]',
+ 		productosModelo = '$prodModif[2]',  productosDescripcion= '$prodModif[3]', productosPrecio = '$prodModif[4]', 
+ 		productosTipo = '$prodModif[5]', productosGarantia ='$prodModif[6]', proveedor_idproveedor = '$prodModif[7]' 
+ 		WHERE idproductos= '$idProd' ";
+//echo "<br>".$sql;
+	$result= mysql_query($sql);
+		if ($result >0){
+			echo "Se ha ingresado la informacion exitosamente ".mysql_info();
+		}
+		else {
+			echo  "Existe una inconsistencia en informacion";
+		}
 }
 ?>
