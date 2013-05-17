@@ -5,6 +5,9 @@
 	<!--<link rel='shortcut icon' href="url del icono"> para poner in favicon-->
 	<link rel='stylesheet' type='text/css' href = "lib/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/lib.js"></script>
+	
 	<style type="text/css" id="background"></style>
 	<title>MixaHarris - Home</title>
 </head>
@@ -12,9 +15,10 @@
 		<div id='navegador'>
 			<div id='homeLogo'>MixaHarris Home</div>
 			<div id='login'>	
-				Usuario: <input class='form' type='text' id='user'>
-				Contraseña: <input class='form' type='text' id='pass'>
-				 <input id='button' type='button' value='Aceptar' onclick''> 
+				Entrar como: <select name='tipoLogin' id='tipoLogin'><option value='1'>Cliente</option><option value='0'>Admin</option></select>
+				Usuario: <input class='form' type='text' name='user' id='user'>
+				Contraseña: <input class='form' type='password' name='pass' id='pass'>
+				 <input id='button' type='button' value='Aceptar' onclick='login();'> 
 			</div>
 		</div>
 	
