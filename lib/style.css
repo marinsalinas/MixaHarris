@@ -1,0 +1,146 @@
+	h1{	
+    background: #ff9600;
+  	color: rgb(255, 255, 255);
+  	font-family:'Ubuntu Sans', sans-serif;
+  	font-size: 4em;
+  	margin: 50px;
+  	padding: 0 0 .1em 1em;
+    text-align: center;   
+	}
+	a{
+	background: rgb(217,201,154);
+	border-radius: .2em;
+  	color: rgb(53, 59, 25);
+  	font-weight: bold;
+  	font-family: 'Ubuntu Sans', sans-serif;
+  	font-size: 1em;
+  	margin: .2em;
+    position: relative;
+	}
+
+ .form
+ {
+  width: 130px;
+  height: 20px;
+ }
+ 
+#homeLogo{
+  font-family: 'Mouse Memoirs', sans-serif, tahoma;
+  margin-left: 10px;
+}
+
+ #button{
+  -webkit-appearance: push-button;
+  background-color: #3f3f3f;
+  color: #FFF;
+  font-size: 16px;
+  height: 20px;
+  width: 70px;
+  vertical-align: top;
+  font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+  webkit-transition:all 0.5s ease;
+ opacity: 1;
+ }
+/* esto es para hacer jalar el transform :D*/
+ #button:hover
+ {
+  opacity: 0.7;
+ }
+
+
+	#navegador{
+    background: #000000;
+  	color: #ff9600;
+  	font-weight: bold;
+  	font-family: 'Ubuntu Sans', sans-serif;
+  	display: inline-block;
+    height: 50px;
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    right:0px;
+	}
+
+  #login{
+    margin-left: 55%;
+    padding-top: 15px;
+    position: relative;
+    }
+
+    #homeLogo{
+    padding-top: 10px;
+    font-size: 1.5em;
+    display: inline-block;
+    float: left;
+  }
+
+
+/*AGREGADO*/
+/* Etiquetas */
+*
+{
+  border: 0;  
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-size: 16px;
+  background-color: #3f3f3f;
+  padding: 10px, 10px, 10px, 10px;
+}
+
+
+
+body , html
+{
+  height: 100%;
+  /*overflow: hidden;*/
+  width: 100%;
+}
+
+
+/*Identificadores*/
+#contenido1
+{
+  display: inline-block;
+}
+
+#imagenes
+{
+  background: #444;
+  display: inline-block;
+  vertical-align: top;
+  width: 69%;
+}
+
+#sidebar{
+  margin-top: -2em;
+}
+/*Clases*/
+.cuadricula
+{
+  /*left: 2em;*/ 
+  /*position: relative;*/
+  /*top: -2em;*/
+  padding-left: 2em;
+} 
+
+.cuadricula img 
+{
+  box-shadow: 5px 5px 10px #000; 
+  width:25%;
+  -webkit-transition:all .5s ease;
+  -moz-transition:all .5s ease;
+  -ms-transition:all .5s ease;
+  -o-transition:all .5s ease;
+}
+/*en box shadow derecha-abajo-difuminado color*/
+
+.cuadricula img:hover
+{
+  margin-left: 2em;
+}
+
+
