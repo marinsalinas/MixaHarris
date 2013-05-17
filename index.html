@@ -15,10 +15,12 @@
 		<div id='navegador'>
 			<div id='homeLogo'>MixaHarris Home</div>
 			<div id='login'>	
-				Entrar como: <select name='tipoLogin' id='tipoLogin'><option value='1'>Cliente</option><option value='0'>Admin</option></select>
+				Entrar como:
+				<form id='lin' name='LogIN' action="login/loginvalidate.php" method='post' accept-charset='utf-8'>
+					<select name='tipoLogin' id='tipoLogin'><option value='1'>Cliente</option><option value='0'>Admin</option></select>
 				Usuario: <input class='form' type='text' name='user' id='user'>
 				Contraseña: <input class='form' type='password' name='pass' id='pass'>
-				 <input id='button' type='button' value='Aceptar' onclick='login();'> 
+				 <input id='button' type='button' value='Aceptar' onclick='login();'></form>
 			</div>
 		</div>
 	
@@ -54,6 +56,6 @@
 		<div><a href="reportes/">Reportes</a></div>
 		<div><a href="formupdate/">Fomularios de Modificaciones</a></div>
 	</secion>
-
+	<div id='cosa'></div>
 </body>
 </html>	

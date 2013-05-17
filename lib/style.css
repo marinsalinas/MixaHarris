@@ -18,6 +18,10 @@
     position: relative;
 	}
 
+#lin{
+  display: inline-block;
+}
+
  .form
  {
   width: 130px;
@@ -104,13 +108,14 @@ body , html
 /*Identificadores*/
 #contenido1
 {
-  display: inline-block;
+  /*display: inline-block;*/
 }
+
 
 #imagenes
 {
   background: #444;
-  display: inline-block;
+  /*display: inline-block;*/
   vertical-align: top;
   width: 69%;
 }
