@@ -143,6 +143,39 @@
   {
 	display: inline-block;
   }
+#blogout a
+  {
+  text-decoration: none;  
+  }
+
+.Bca {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/conf1.png) bottom;
+  text-indent: -99999px;
+}
+.Bca:hover {
+  background: url(../images/conf2.png) no-repeat;
+  background-position: 0 0;
+}
+
+
+p.hdm
+  {
+    color: #000;
+    font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+    font-size: 2em;
+  }
+  pre.preAd
+  {
+    width: 400px;
+    margin: 0 auto;
+  }
+ul.liad
+  {
+    text-align: center;
+  }
 /*------------STYLE ADMIN--------*/
 
 /*AGREGADO*/
