@@ -38,27 +38,48 @@
 		
 		<!--Cuerpo de pagina-->
 		<div id='containerAdmin'>
+			
+			<div id="sidebarAdmin">	
+			<center><p>SECCIONES</p></center>			
+				<section id='sidebar'>
+				<nav>
+				<figure class="cuadricula">
+					<img src="../../images/btn1.png">
+				</figure>
+
+				<figure class="cuadricula">
+					<img src="../../images/btn2.png">
+				</figure>
+
+				<figure class="cuadricula">
+					<img src="../../images/btn3.png">
+				</figure>
+
+				<figure class="cuadricula">
+					<img src="../../images/btn4.png">
+				</figure>
+				<figure class="cuadricula">
+					<img src="../../images/btn5.png">
+				</figure>
+				</figure>
+				<figure class="cuadricula">
+					<img src="../../images/btn6.png">
+				</figure>
+				<figure class="cuadricula">
+					<img src="../../images/btn7.png">
+				</figure>
+				</nav>
+				</section>
+			</div>	
 				
-				<div id='sidebarAdmin'>
-					<ul>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-						<li>kdbclkasdjbvlkdas</li>
-					
-					</ul
+					<div id='menuAdmin'>
+						<center><h2>Configuración MixaHarris</h2></center>
+						<p></br></br></br></br>
+							
+
+						</p>
+					</div>
 				
-				
-				</div>
-				
-				<div id='menuAdmin'>
-					sadgadsfasfadsfadsfasdfragñbjvalergfnlakhnclwabnegvlua.kjasnflkj
-				</div>
-		
 		
 		
 		
