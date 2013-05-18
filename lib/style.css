@@ -42,7 +42,7 @@ h2{
 
  .form
  {
-  width: 130px;
+  width: 100px;
   height: 20px;
  }
  
@@ -84,7 +84,7 @@ h2{
 	}
 
   #login{
-    margin-left: 35%;
+    margin-left: 53%;
     padding-top: 15px;
     position: relative;
     }
