@@ -29,13 +29,14 @@
 		<div id='navegador'>
 			<div id='homeLogo'>MixaHarris Administrador</div>
 				<div id='navAdmin'>	
-					Hola, <?php echo $admin->administradorNombre;?>
-					<form action='../../login/logout.php' id='blogout'><input id='button' type='submit' value='Logout'></form>
+					Hola, <?php echo $admin->administradorNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../formupdate/view/edit_admin.php" title="Configurar datos personales">conf</a> 
 				 </div>
 		</div><!--navegador-->
-		
-		
-		
+			
 		<!--Cuerpo de pagina-->
 		<div id='containerAdmin'>
 			
@@ -73,11 +74,36 @@
 			</div>	
 				
 					<div id='menuAdmin'>
-						<center><h2>Configuración MixaHarris</h2></center>
-						<p></br></br></br></br>
-							
+						<center><h2>MixaHarris</h2></center>
+						</br></br></br></br>
+							<p class='hdm'>Menú de configuracion de MixaHarris</p>
+						</br></br>
+<pre class='preAd'>
+<p class='hdm'>Usuarios:</p>
+<ul class='liad'>
+	<li>Ver informacion de un usuario</li>
+	<li>Agregar un nuevo usuario</li>
+	<li>Modificar datos de un usuario</li>
+	<li>Eliminar un usuario</li>
+</ul>
+<p class='hdm'>Productos:</p>
+<ul class='liad'>
+	<li>Ver productos</li>
+	<li>Agregar producto</li>
+	<li>Modificar producto</li>
+	<li>Eliminar producto</li>
+</ul>
+<p class='hdm'>Proveedores:</p>
+<ul class='liad'>
+	<li>Ver proveedores</li>
+	<li>Agregar proveedor</li>
+	<li>Modificar proveedor</li>
+	<li>Eliminar proveedor</li>
+</ul>
+</pre>
 
-						</p>
+
+						
 					</div>
 				
 		
