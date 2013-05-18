@@ -84,9 +84,9 @@ h2{
 	}
 
   #login{
-    margin-left: 53%;
+    margin-left: 50%;
     padding-top: 15px;
-    position: relative;
+    /*position: absolute;*/
     }
 	
 	
@@ -186,3 +186,14 @@ body , html
 }
 
 
+/*responsive desing: 
+ * Esto es para adaptarlo a cualquie monitor
+ */
+@media screen and (max-width: 1243px){
+  #login{
+    margin-left: 40%;
+    padding-top: 15px;
+    /*position: absolute;*/
+    }
+
+  }
