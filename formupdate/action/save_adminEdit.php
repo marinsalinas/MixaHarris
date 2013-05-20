@@ -7,7 +7,7 @@
 	require_once("../../login/validpriv.php");
 	require_once("../lib/edit_lib.php");
 	validAdmin();
-	$idadmin=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
+	$idadmin=$_SESSION['usuario']->idadministrador; //este es el valor del id del usuario en esta sesion
 	//$adModif = selectClienteConID($idusr);
 	/*echo"<pre>";
 	print_r($usrModif);
@@ -18,6 +18,7 @@
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
 <title>MixaHarris - Modificar Registros de Clientes</title>
 <body>
+	
 	<h1>Se obtuvieron los datos para modificar</h1>
 	<?php
 	$adminModif=array();
@@ -32,6 +33,8 @@
 	echo "</pre>";
 	echo "<p>";*/
 	updateAdminConID($adminModif, $_SESSION['usuario']->idadministrador);
+	header('Location: ../../main/pagindex/adminindex.php');
+
 	echo"<p>";
 	?>	
 </body>

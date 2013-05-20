@@ -9,7 +9,6 @@
 		<title>MixaHarris Adminstrador</title>
 </head>
 
-
 <body>
 	<?php
 	session_start();
@@ -75,30 +74,26 @@
 				
 					<div id='menuAdmin'>
 						<center><h2>MixaHarris</h2></center>
-						</br></br></br></br>
-							<p class='hdm'>Menú de configuracion de MixaHarris</p>
 						</br></br>
+							<p class='hdm'>Menú de configuracion de MixaHarris</p>
 <pre class='preAd'>
+
+	
 <p class='hdm'>Usuarios:</p>
 <ul class='liad'>
-	<li>Ver informacion de un usuario</li>
-	<li>Agregar un nuevo usuario</li>
-	<li>Modificar datos de un usuario</li>
-	<li>Eliminar un usuario</li>
+	<li><a href='../../reportes/action/cliente.php'>Ver informacion de  usuarios</a></li>
+	<li><a  href='../../formulario/view/alta_clientes.php'>Agregar nuevo usuario</a></li>
 </ul>
 <p class='hdm'>Productos:</p>
 <ul class='liad'>
-	<li>Ver productos</li>
-	<li>Agregar producto</li>
-	<li>Modificar producto</li>
-	<li>Eliminar producto</li>
+	<li><a href='../../reportes/action/producto.php'>Ver productos</a></li>
+	<li><a href='../../formulario/view/alta_productos.php'>Agregar producto</a></li>
+
 </ul>
 <p class='hdm'>Proveedores:</p>
 <ul class='liad'>
-	<li>Ver proveedores</li>
-	<li>Agregar proveedor</li>
-	<li>Modificar proveedor</li>
-	<li>Eliminar proveedor</li>
+	<li><a href='../../reportes/action/proveedor.php'>Ver proveedores</a></li>
+	<li><a href='../../formulario/view/alta_proveedores.php'>Agregar proveedor</a></li>
 </ul>
 </pre>
 
