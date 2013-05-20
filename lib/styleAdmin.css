@@ -10,9 +10,9 @@
 	
 	a{
 	/*background: rgb(217,201,154);*/
-	border-radius: .2em;
+	   border-radius: .2em;
   	color: #ff9600;
-	font-weight: bold;
+	   font-weight: bold;
   	font-family: 'Ubuntu Sans', sans-serif;
   	font-size: 1em;
   	margin: .2em;
@@ -105,19 +105,20 @@
 	}
 #menuAdmin
   {
-		width: 77%;
+		width: 50%;
 		background:#ff9600;
-    float:right;
+    /*float:right;*/
     border-radius: 5px;
-    margin:0 auto;
+    margin-left:35%;
     padding: 15px;
-
+    margin-top: 30px;
 	}
 	
 #sidebarAdmin
   {
 		/*background: #fff;*/
 		margin-top: 30px;
+    margin-left: 3%;
     width: 20%;
 		display:block;
 		float: left;
@@ -172,10 +173,25 @@ p.hdm
     width: 400px;
     margin: 0 auto;
   }
-ul.liad
-  {
-    text-align: center;
+ul.liad li
+  { 
+    display: inline-block;
   }
+ul.liad a{
+  color:#1d1d1d;
+  text-decoration: none;
+}
+ul.liad a:hover{
+  background-color:#000;
+  color:#ff9600;
+  border-radius:5px;
+  padding:3 px;
+  transition:all 0.5s linear;
+  -webkit-transition:all 0.1s linear;
+  -moz-transition:all 0.1s linear;
+  -o-transition:all 0.1s linear;
+  }
+
 /*------------STYLE ADMIN--------*/
 
 /*AGREGADO*/
@@ -260,3 +276,16 @@ body , html
 }
 
 
+
+
+/*-----------------------style de CLIENTES PRINCIPIO*/
+#menuClientes
+  {
+    width: 900px;
+    background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    margin-left:3%;
+    padding: 15px;
+    margin-top: 80px;
+  }
