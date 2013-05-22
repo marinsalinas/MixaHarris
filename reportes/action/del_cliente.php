@@ -1,7 +1,7 @@
 <?php
 require_once('../../config.php');
-
-$info=$_GET['id'];
+//aqui era $info=$_GET['id'];
+$info=$_POST['id'];
 //echo $info;
 
 $sql = "DELETE FROM mixaharris.clientes WHERE idclientes=$info";
@@ -11,6 +11,6 @@ if ($result>0){
 	echo "Se ha eliminado exitosamente el registro";	
 }
 else{
-		echo "Contacte a su administrador";
+		echo "No se pudo realizar la operación Contacte a su administrador";
 }
 ?>

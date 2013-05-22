@@ -8,7 +8,7 @@
 function lista_cliente ($cliente) {
 	//echo "FUNCION/ACTIVA";
 
-echo "<table>";
+echo "<section id='tlb'><table>";
 echo "<tr>";
 echo "<th>ID</th>";//1 
 echo "<th>Nombre(s)</th>";//2
@@ -40,21 +40,21 @@ echo "<td>".$client->clientesNacimiento."</td>";
 echo "<td>".$client->clientesSexo."</td>";
 echo "<td>".$client->clientesOcupacion."</td>";
 echo "<td>".$client->clientesUsername."</td>";
-echo "<td>"."<a href=del_cliente.php?id=".$client->idclientes.">Eliminar</a></td> ";
+//echo "<td>"."<a href=del_cliente.php?id=".$client->idclientes.">Eliminar</a></td> ";
+echo "<td>"."<input type='button' onclick='eliminarUsr(".$client->idclientes.")' value='Eliminar'></td> ";
 echo "<td>"."<a href=../../formupdate/view/edit_clienteRep.php?id=".$client->idclientes.">Editar</a></td> ";
 echo "</tr>";	
 }
-echo "</table>";
+echo "</table><section>";
 }
 
 
 function form_fliterCliente(){
 
 echo "<form action='../action/filtro_cliente.php' method='post'>";
-/*echo "Filtrar:";*/
 echo "</br></br>";
 echo "<center><input type= 'text' id='info' name='info'>"; 
-echo "<input type= 'submit'  value='BUSCAR' ></center>"; 
+echo "<input type= 'submit' value='BUSCAR' ></center>"; 
 echo "</br></br>";
 echo "</form>";
 	

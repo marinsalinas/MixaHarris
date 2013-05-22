@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
 	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="lib/jquery.js"></script>
-	<script type="text/javascript" src="lib/lib.js"></script>
+	<script type="text/javascript" src="../../lib/jquery.js"></script>
+	<script type="text/javascript" src="../../lib/lib2.js"></script>
 	<title>MixaHarris - Reporte de Cleintes/Usuarios</title>
 </head>
 <body>
