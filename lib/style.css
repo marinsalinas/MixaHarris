@@ -102,12 +102,12 @@ h2{
    #imagenesCatalogo
 {
   display: inline-block;
-  height: 38em;
+  height: 48.3em;/*aqui era 38*/
   margin: 4em 0 0 230%;
   overflow-y: scroll;
   position: absolute;
   vertical-align: top;
-  width: 40%;
+  width: 56%;
   -webkit-transition:all 1s ease;
 }
 
@@ -192,8 +192,7 @@ body , html
 }
 
 #sidebar{
-  margin-top: 5%;
-
+  margin-top: 5%; 
 }
 /*Clases*/
 .cuadricula
