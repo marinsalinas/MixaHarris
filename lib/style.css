@@ -107,12 +107,13 @@ h2{
   position: absolute;
   width: 100%;
   display: block;
-  z-index: 1;
+  /*z-index: 3;*/
 }
 
 
    #imagenesCatalogo
 {
+  background-color: #3f3f3f;
   display: inline-block;
   height: 48.3em;/*aqui era 38*/
   margin: 4em 0 0 230%;
@@ -121,6 +122,7 @@ h2{
   vertical-align: top;
   width: 56%;
   -webkit-transition:all 1s ease;
+  z-index: 3;
 }
 
 
@@ -134,6 +136,18 @@ h2{
 .productos img
 {
   width: 100%;
+}
+
+#registrar
+{
+position: absolute;
+padding-top: 4em;
+margin-left: 50%;
+font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+font-size: 4em;
+font-style: bold;
+display: inline-block;
+z-index: 2;
 }
 	
 	/*--------STYLE ADMIN------*/
@@ -209,10 +223,10 @@ body , html
 /*Clases*/
 .cuadricula
 {
-  /*left: 2em;*/ 
-  /*position: relative;*/
+  left: 2em;
+  position: relative;
   /*top: -2em;*/
-  padding-left: 2em;
+  /*padding-left: 2em;*/
 } 
 
 .cuadricula img 
