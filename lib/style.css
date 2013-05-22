@@ -81,6 +81,7 @@ h2{
     top: 0px;
     left: 0px;
     right:0px;
+    z-index: 111110;
 	}
 
   #login{
@@ -89,16 +90,38 @@ h2{
     /*position: absolute;*/
     }
 
+#sidebar, #imagenesCatalogo
+{
+  position: absolute;
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+
+
    #imagenesCatalogo
 {
   display: inline-block;
   height: 38em;
-  margin: 2em 0 0 230%;
+  margin: 4em 0 0 230%;
   overflow-y: scroll;
   position: absolute;
   vertical-align: top;
-  width: 69%;
+  width: 40%;
   -webkit-transition:all 1s ease;
+}
+
+
+.productos
+{
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+}
+
+.productos img
+{
+  width: 100%;
 }
 	
 	/*--------STYLE ADMIN------*/
@@ -184,7 +207,7 @@ body , html
 .cuadricula img 
 {
   box-shadow: 5px 5px 10px #000; 
-  width:25%;
+  width:20%;
   -webkit-transition:all .5s ease;
   -moz-transition:all .5s ease;
   -ms-transition:all .5s ease;
@@ -209,3 +232,10 @@ body , html
     }
 
   }
+
+  /*CARPETAS*/
+
+  #carpetas{
+    display: none;
+  }
+
