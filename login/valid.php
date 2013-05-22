@@ -1,6 +1,6 @@
 <?php
 if (empty($_SESSION['usuario'])) {
-	header('Location: ../../login/login.php');
+	header('Location: ../../index.html');
 	die();
 }
 ?>

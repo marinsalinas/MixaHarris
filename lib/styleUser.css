@@ -1,0 +1,443 @@
+	h1{	
+    background: #ff9600;
+  	color: rgb(255, 255, 255);
+  	font-family:'Ubuntu Sans', sans-serif;
+  	font-size: 4em;
+  	margin: 50px;
+  	padding: 0 0 .1em 1em;
+    text-align: center;   
+	}
+	
+	a{
+	/*background: rgb(217,201,154);*/
+	  border-radius: .2em;
+  	color: #ff9600;
+	  font-weight: bold;
+  	font-family: 'Ubuntu Sans', sans-serif;
+  	font-size: 1em;
+  	margin: .2em;
+    position: relative;
+	}
+	
+	a:hover{
+	background-color:#ffb033;
+	color:#1d1d1d;
+	border-radius:5px;
+	padding:3 px;
+	transition:all 0.5s linear;
+	-webkit-transition:all 0.1s linear;
+	-moz-transition:all 0.1s linear;
+	-o-transition:all 0.1s linear;
+	}
+
+#lin{
+  display: inline-block;
+}
+
+ .form
+ {
+  width: 130px;
+  height: 20px;
+ }
+ 
+#homeLogo{
+  font-family: 'Mouse Memoirs', sans-serif, tahoma;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-transition:all 0.1s linear;
+  -moz-transition:all 0.1s linear;
+  -o-transition:all 0.1s linear;
+}
+#homeLogo:hover
+{
+opacity:0.8;
+}
+
+ #button{
+  -webkit-appearance: push-button;
+  background-color: #3f3f3f;
+  color: #FFF;
+  font-size: 16px;
+  height: 20px;
+  width: 70px;
+  vertical-align: top;
+  font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+  webkit-transition:all 0.5s ease;
+ opacity: 1;
+ cursor: pointer;
+ }
+/* esto es para hacer jalar el transform :D*/
+ #button:hover
+ {
+  opacity: 0.7;
+ }
+
+
+	#navegador{
+    background: #000000;
+  	color: #ff9600;
+  	font-weight: bold;
+  	font-family: 'Ubuntu Sans', sans-serif;
+  	display: inline-block;
+    height: 50px;
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    right:0px;
+	}
+
+  #login{
+    margin-left: 35%;
+    padding-top: 15px;
+    position: relative;
+    }
+	
+	
+	/*--------STYLE ADMIN------*/
+	
+#navAdmin
+  {
+		margin-left: 80%;
+		padding-top: 15px;
+		position: relative;
+  }
+	
+#containerAdmin
+  {
+		width: 98%;
+		height:900px;
+		/*background:#000;*/
+		margin-top: 60px;
+		margin-right:1%;
+		margin-left: 1%;
+		display:inline-block;
+	}
+#menuAdmin
+  {
+		width: 50%;
+		background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    margin-left:35%;
+    padding: 15px;
+    margin-top: 30px;
+	}
+	
+#sidebarAdmin
+  {
+		/*background: #fff;*/
+		margin-top: 30px;
+    margin-left: 3%;
+    width: 20%;
+		display:block;
+		float: left;
+	}
+
+#menuAdmin h2
+  {
+    color: #000;
+    font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+    font-size: 3em;
+  }
+
+	
+#homeLogo
+  {
+    padding-top: 10px;
+    font-size: 1.5em;
+    display: inline-block;
+    float: left;
+  }
+
+#blogout
+  {
+	display: inline-block;
+  }
+#blogout a
+  {
+  text-decoration: none;  
+  }
+
+.Bca {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/conf1.png) bottom;
+  text-indent: -99999px;
+}
+.Bca:hover {
+  background: url(../images/conf2.png) no-repeat;
+  background-position: 0 0;
+}
+
+
+p.hdm
+  {
+    color: #000;
+    font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+    font-size: 2em;
+  }
+  pre.preAd
+  {
+    width: 400px;
+    margin: 0 auto;
+  }
+ul.liad li
+  { 
+    display: inline-block;
+  }
+ul.liad a{
+  color:#1d1d1d;
+  text-decoration: none;
+}
+ul.liad a:hover{
+  background-color:#000;
+  color:#ff9600;
+  border-radius:5px;
+  padding:3 px;
+  transition:all 0.5s linear;
+  -webkit-transition:all 0.1s linear;
+  -moz-transition:all 0.1s linear;
+  -o-transition:all 0.1s linear;
+  }
+
+/*------------STYLE ADMIN--------*/
+
+/*AGREGADO*/
+/* Etiquetas */
+*
+{
+  border: 0;  
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-size: 16px;
+  background-color: #3f3f3f;
+  padding: 10px, 10px, 10px, 10px;
+	font-family: 'Ubuntu Sans', sans-serif;
+  }
+
+
+
+body , html
+{
+  height: 100%;
+  /*overflow: hidden;*/
+    font-family: 'Ubuntu Sans', sans-serif;
+  width: 100%;
+}
+
+
+/*Identificadores*/
+#contenido1
+{
+  /*display: inline-block;*/
+}
+
+
+#imagenes
+{
+  background: #444;
+  /*display: inline-block;*/
+  vertical-align: top;
+  width: 69%;
+}
+
+#sidebar{
+  margin-top: 20px;
+  width:150px;
+  float:left;
+}
+
+#sidebarAdmin p{
+	color: #ff9600;
+	font-size:40px;
+	 font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+}
+/*Clases*/
+.cuadricula
+{
+  margin-bottom: 7px;
+  /*left: 2em;*/ 
+  /*position: relative;*/
+  /*top: -2em;*/
+  /*padding-left: 2em;*/
+} 
+
+.cuadricula img 
+{
+
+  box-shadow: 5px 5px 10px #000; 
+  /*width:25%;*/
+  -webkit-transition:all .5s ease;
+  -moz-transition:all .5s ease;
+  -ms-transition:all .5s ease;
+  -o-transition:all .5s ease;
+}
+/*en box shadow derecha-abajo-difuminado color*/
+
+.cuadricula img:hover
+{
+  margin-left: 2em;
+  opacity: 0.7;
+}
+
+
+
+
+/*-----------------------style de CLIENTES PRINCIPIO*/
+#menuClientes
+  {
+    
+    background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+  }
+
+
+  /*#menuClientes table{
+    border: 1px solid;
+    border-color:blue;
+    width: 600px;
+    background: #000000;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 700px;
+    color: #ff9600;
+
+  }*/
+table{
+  border:3px solid #000000;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+  /*border-collapse: collapse;*/
+ /* table-layout: auto;*/
+}
+th
+{
+background-color:#000000;
+color:white;
+}
+td{
+  border:1px solid #000000;  
+  border-left: none;
+  border-right: none;
+}
+
+table a{
+  color: #000;
+  text-decoration: none;
+}
+table a:hover{
+    background-color:#000;
+    color:#ff9600;
+   font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+    margin: .2em;
+    position: relative; 
+}
+
+
+
+
+/*--------------------------Altas cliente inicio------------------*/
+#menuAltaClientes{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 500px;
+}
+#tablaAltaCliente{
+  margin-bottom: 30px;
+}
+
+#tablaAltaCliente th{
+  background: none;
+  text-align: right;
+  color: #000;
+}
+#tablaAltaCliente td{
+  border:0px solid #000000;  
+  text-align: left;
+  font-size: 24px;
+
+}
+
+.sexo{
+  display: inline-block;
+  font-family: 'Ubuntu Sans', sans-serif;
+  font-size: 0.6em;
+  font-weight:  bold;
+}
+
+
+
+
+
+/*-------------Save CLientes-------Inicio*/
+#menuSaveClientes{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 500px;
+}
+#aF{
+    color: #000000;
+  text-decoration: none;
+}
+
+#aF:hover{
+   background-color:#000;
+    color:#ff9600;
+   font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+    margin: .2em;
+    position: relative; 
+}
+
+
+/*--------------Productos--------inicio*/
+#menuProductos{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 900px;
+}
+
+
+
+/*------------Proveedor--------inicio*/
+
+#menuProveedor{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 600px;
+}
