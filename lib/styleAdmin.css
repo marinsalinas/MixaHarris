@@ -59,7 +59,7 @@
  }
 /* esto es para hacer jalar el transform :D*/
  #button:hover
- {-
+ {
   opacity: 0.7;
  }
 
@@ -217,6 +217,7 @@ body , html
 {
   height: 100%;
   /*overflow: hidden;*/
+    font-family: 'Ubuntu Sans', sans-serif;
   width: 100%;
 }
 
@@ -365,6 +366,13 @@ table a:hover{
   text-align: left;
   font-size: 24px;
 
+}
+
+.sexo{
+  display: inline-block;
+  font-family: 'Ubuntu Sans', sans-serif;
+  font-size: 0.6em;
+  font-weight:  bold;
 }
 
 

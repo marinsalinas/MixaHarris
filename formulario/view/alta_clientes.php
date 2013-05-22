@@ -15,9 +15,9 @@
 	<?php
 	session_start();
 	//lo mismo
-	require_once("../../login/valid.php");
-	require_once("../../login/validpriv.php");
-	validAdmin();
+	//require_once("../../login/valid.php");
+	//require_once("../../login/validpriv.php");
+	//validAdmin();
 	//echo "<h1>MixaHarris - Admin Index Nuevo </h1>";
 	$admin = $_SESSION['usuario'];
 	//print_r($usuario);
@@ -82,8 +82,8 @@
 				</td>
 			</tr>
 			<tr><th>Sexo:</th>
-				<td><input type='radio' name='sexo' value='F' />Mujer
-				<input type='radio' name='sexo' value='M' />Hombre</td>
+				<td><input type='radio' name='sexo' value='F' /><div class="sexo">Mujer</div>
+				<input type='radio'name='sexo' value='M' /><div class="sexo">Hombre</div></td>
 			</tr>
 			<tr><td colspan="2"><center><input  id='button' type='submit'value='Aceptar'/></center></td></tr>
 		</form>
