@@ -8,22 +8,22 @@
 function lista_cliente ($cliente) {
 	//echo "FUNCION/ACTIVA";
 
-echo "<table border=1 alling='center'>";
+echo "<table>";
 echo "<tr>";
-echo "<td>ID</td>";//1 
-echo "<td>Nombre(s)</td>";//2
-echo "<td>Apellidos</td>";//3
-echo "<td>Drecci&oacute;n</td>";//4
-echo "<td>C&oacute;digo Postal</td>";//5
-echo "<td>Email</td>";//6
-echo "<td>Tel&eacute;fono</td>";//7 telefono
-echo "<td>M&oacute;vil</td>";//8 móvil
-echo "<td>Fecha Nacimiento</td>";//9
-echo "<td>Sexo</td>";//10
-echo "<td>Ocupaci&oacute;n</td>";//11 Ocupacion
-echo "<td>Username</td>";//12
-echo "<td>Eliminar Registro</td>";
-echo "<td>Editar Registro</td>";
+echo "<th>ID</th>";//1 
+echo "<th>Nombre(s)</th>";//2
+echo "<th>Apellidos</th>";//3
+echo "<th>Drecci&oacute;n</th>";//4
+echo "<th>C&oacute;digo Postal</th>";//5
+echo "<th>Email</th>";//6
+echo "<th>Tel&eacute;fono</th>";//7 telefono
+echo "<th>M&oacute;vil</th>";//8 móvil
+echo "<th>Fecha Nacimiento</th>";//9
+echo "<th>Sexo</th>";//10
+echo "<th>Ocupaci&oacute;n</th>";//11 Ocupacion
+echo "<th>Username</th>";//12
+echo "<th>Eliminar Registro</th>";
+echo "<th>Editar Registro</th>";
 echo "</tr>";
 
 foreach ($cliente as $key => $client) {
@@ -47,12 +47,15 @@ echo "</tr>";
 echo "</table>";
 }
 
+
 function form_fliterCliente(){
 
 echo "<form action='../action/filtro_cliente.php' method='post'>";
-echo "Filtrar:";
-echo "<input type= 'text' id='info' name='info'>"; 
-echo "<input type= 'submit'  value='BUSCAR' >"; 
+/*echo "Filtrar:";*/
+echo "</br></br>";
+echo "<center><input type= 'text' id='info' name='info'>"; 
+echo "<input type= 'submit'  value='BUSCAR' ></center>"; 
+echo "</br></br>";
 echo "</form>";
 	
 }

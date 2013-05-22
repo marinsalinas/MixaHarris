@@ -5,22 +5,55 @@
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
-<title>MixaHarris - Formulario Clientes</title>
+	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
+	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/lib.js"></script>
+	
+<title>MixaHarris - Alta Clientes</title>
 <body>
-	<h1>Formularios Altas</h1>
-	<table>
+	<?php
+	session_start();
+	//lo mismo
+	require_once("../../login/valid.php");
+	require_once("../../login/validpriv.php");
+	validAdmin();
+	//echo "<h1>MixaHarris - Admin Index Nuevo </h1>";
+	$admin = $_SESSION['usuario'];
+	//print_r($usuario);
+	//echo "<div id='navegador'>";
+		//echo"<p>"."Bienvenido ".$admin->administradorNombre."<a href='../../login/logout.php'>Logout</a></p>";
+	//echo "</div>";
+	?>
+	<div id='navegador'>
+			<div id='homeLogo'>MixaHarris Administrador - Alta Clientes</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $admin->administradorNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../main/pagindex/adminindex.php" title="Menú administrador">conf</a> 
+				 </div>
+		</div><!--navegador-->
+
+
+<center><div id='menuAltaClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'>Alta de Usuarios</p>
+	<table id="tablaAltaCliente">
 		<form name='altasClientes' action="../action/save_clientes.php" method='post' accept-charset='utf-8'>
-			<tr><td>Nombre(s):</td><td><input type='text' name='nombre'/></td></tr>
-			<tr><td>Apellido(s):</td><td><input type='text' name='apellidos'/></td></tr>
-			<tr><td>Nombre de Usuario:</td><td><input type='text' name='username'/></td></tr>
-			<tr><td>Contrase&ntilde;a:</td><td><input type='password' name='pass'/></td></tr>
-			<tr><td>Direcci&oacute;n:</td><td><input type='text' name='direccion'/></td></tr>
-			<tr><td>C&oacute;digo Postal:</td><td><input type='number' name='CP'/></td></tr>
-			<tr><td>Email:</td><td><input type='email' name='email'/></td></tr>
-			<tr><td>Tel&eacute;fono:</td><td><input type='number' name='tel'/></td></tr>
-			<tr><td>M&oacute;vil:</td><td><input type='number' name='cel'/></td></tr>
-			<tr><td>Ocupaci&oacute;n:</td><td><input type='text' name='ocupacion'/></td></tr>
-			<tr><td>Fecha de Nacimiento:</td>
+			<tr><th>Nombre(s):</th><td><input type='text' name='nombre'/></td></tr>
+			<tr><th>Apellido(s):</th><td><input type='text' name='apellidos'/></td></tr>
+			<tr><th>Nombre de Usuario:</th><td><input type='text' name='username'/></td></tr>
+			<tr><th>Contrase&ntilde;a:</th><td><input type='password' name='pass'/></td></tr>
+			<tr><th>Direcci&oacute;n:</th><td><input type='text' name='direccion'/></td></tr>
+			<tr><th>C&oacute;digo Postal:</th><td><input type='number' name='CP'/></td></tr>
+			<tr><th>Email:</th><td><input type='email' name='email'/></td></tr>
+			<tr><th>Tel&eacute;fono:</th><td><input type='number' name='tel'/></td></tr>
+			<tr><th>M&oacute;vil:</th><td><input type='number' name='cel'/></td></tr>
+			<tr><th>Ocupaci&oacute;n:</th><td><input type='text' name='ocupacion'/></td></tr>
+			<tr><th>Fecha de Nacimiento:</th>
 				<td>
 					<?php
 					/*Script PHP el cual nos ayuda a llenar mas rapidamente los dropdown-list*/
@@ -48,12 +81,14 @@
 					?>	
 				</td>
 			</tr>
-			<tr><td>Sexo:</td>
+			<tr><th>Sexo:</th>
 				<td><input type='radio' name='sexo' value='F' />Mujer
 				<input type='radio' name='sexo' value='M' />Hombre</td>
 			</tr>
-			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+			<tr><td colspan="2"><center><input  id='button' type='submit'value='Aceptar'/></center></td></tr>
 		</form>
 	</table>
+
+</div></center><!--Div de menu-->
 </body>
 </hmtl>

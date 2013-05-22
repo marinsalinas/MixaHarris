@@ -10,16 +10,16 @@ function lista_producto ($producto) {
 
 echo "<table border=1 alling='center'>";
 echo "<tr>";
-echo "<td>ID</td>";//1 
-echo "<td>Nombre del producto</td>";//2
-echo "<td>Marca</td>";//3
-echo "<td>Modelo</td>";//4
-echo "<td>Descripcion</td>";//5
-echo "<td>Precio</td>";//6
-echo "<td>Tipo</td>";//7 
-echo "<td>Garantia</td>";//8 
-echo "<td>Eliminar Registro</td>";
-echo "<td>Editar Registro</td>";
+echo "<th>ID</th>";//1 
+echo "<th>Nombre del producto</th>";//2
+echo "<th>Marca</th>";//3
+echo "<th>Modelo</th>";//4
+echo "<th>Descripcion</th>";//5
+echo "<th>Precio</th>";//6
+echo "<th>Tipo</th>";//7 
+echo "<th>Garantia</th>";//8 
+echo "<th>Eliminar Registro</th>";
+echo "<th>Editar Registro</th>";
 echo "</tr>";
 
 foreach ($producto as $key => $prod) {
@@ -42,9 +42,10 @@ echo "</table>";
 function form_fliterProducto(){
 
 echo "<form action='../action/filtro_producto.php' method='post'>";
-echo "Filtrar:";
+echo "</br></br>";
 echo "<input type= 'text' id='info' name='info'>"; 
 echo "<input type= 'submit'  value='BUSCAR' >"; 
+echo "</br></br>";
 echo "</form>";
 	
 }
