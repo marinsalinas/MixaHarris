@@ -5,37 +5,59 @@ require_once("../../login/validpriv.php");
 require_once("../lib/edit_lib.php");
 validAdmin();
 $usrModif = selectClienteConID($_GET['id']);
+$admin = $_SESSION['usuario'];
 /*echo"<pre>";
 print_r($usrModif);
 echo "</pre>";*/
 ?>
-<meta charset='utf-8'/>
+<html>
+	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
+	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/lib.js"></script>
 <title>MixaHarris - Formulario Clientes</title>
 <body>
-	<h1>Modificar Registro del Ciente</h1>
-	<table>
+	
+
+	<div id='navegador'>
+			<div id='homeLogo'>MixaHarris Administrador - Modificar Cliente</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $admin->administradorNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='modbutton' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../main/pagindex/adminindex.php" title="Menú administrador">conf</a> 
+				 </div>
+		</div><!--navegador-->
+
+<center><div id='menuModClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'>Editar datos</p>
+	<table id="tablaModCliente">
 		<form name='editClientesRep' action="../action/save_clientesEditRep.php" method='post' accept-charset='utf-8'>
-			<tr><td>Nombre(s):</td><td>
+			<tr><th>Nombre(s):</th><td>
 				<input type='text' name='nombre' value=<?php echo "'".$usrModif->clientesNombre."'"; ?>/></td></tr>
-			<tr><td>Apellido(s):</td><td>
+			<tr><th>Apellido(s):</th><td>
 				<input type='text' name='apellidos' value=<?php echo "'".$usrModif->clientesApellido."'"; ?>/></td></tr>
-			<tr><td>Nombre de Usuario:</td><td>
+			<tr><th>Nombre de Usuario:</th><td>
 				<input type='text' name='username' value=<?php echo "'".$usrModif->clientesUsername."'"; ?>/></td></tr>
-			<tr><td>Direcci&oacute;n:</td><td>
+			<tr><th>Direcci&oacute;n:</th><td>
 				<input type='text' name='direccion' value=<?php echo "'".$usrModif->clientesDireccion."'";?>/></td></tr>
-			<tr><td>C&oacute;digo Postal:</td><td>
+			<tr><th>C&oacute;digo Postal:</th><td>
 				<input type='number' name='CP' value=<?php echo "'".$usrModif->clientesCP."'"; ?>/></td></tr>
-			<tr><td>Email:</td><td>
+			<tr><th>Email:</th><td>
 				<input type='email' name='email' value=<?php echo "'".$usrModif->clientesEmail."'"; ?>/></td></tr>
-			<tr><td>Tel&eacute;fono:</td><td>
+			<tr><th>Tel&eacute;fono:</th><td>
 				<input type='number' name='tel' value=<?php echo "'".$usrModif->clientesTelefono."'"; ?>/></td></tr>
-			<tr><td>M&oacute;vil:</td><td>
+			<tr><th>M&oacute;vil:</th><td>
 				<input type='number' name='cel' value=<?php echo "'".$usrModif->clientesCelular."'"; ?>/></td></tr>
-			<tr><td>Ocupaci&oacute;n:</td><td>
+			<tr><th>Ocupaci&oacute;n:</th><td>
 				<input type='text' name='ocupacion' value=<?php echo "'".$usrModif->clientesOcupacion."'";?>/></td></tr>
-			<tr><td>Fecha de Nacimiento:</td>
+			<tr><th>Fecha de Nacimiento:</th>
 				<td>
 				<?php
 				/*Script PHP el cual nos ayuda a llenar mas rapidamente los dropdown-list*/
@@ -73,15 +95,15 @@ echo "</pre>";*/
 				?>	
 				</td>
 			</tr>
-			<tr><td>Sexo:</td>
+			<tr><th>Sexo:</th>
 				<?php
 				$sexo = $usrModif->clientesSexo;
 				if($sexo == 'F'){
-				echo "<td>"."<input type='radio' name='sexo' value='F' checked/>Mujer\n";
-				echo "<input type='radio' name='sexo' value='M' />Hombre</td>\n";
+				echo "<td>"."<input type='radio' name='sexo' value='F' checked/><div class='modsexo'>Mujer\n</div>";
+				echo "<input type='radio' name='sexo' value='M' /><div class='modsexo'>Hombre\n</div></td>\n";
 				}else{
-				echo "<td>"."<input type='radio' name='sexo' value='F'/>Mujer\n";
-				echo "<input type='radio' name='sexo' value='M' checked/>Hombre</td>\n";
+				echo "<td>"."<input type='radio' name='sexo' value='F'/><div class='modsexo'>Mujer\n</div>";
+				echo "<input type='radio' name='sexo' value='M' checked/><div class='modsexo'>Hombre\n</div></td>\n";
 				}
 				//este campo es oculto de donde en el archivo del formulario obtengo el id sin que se me muestre
 				echo "<input type='hidden' name ='id' value='".$usrModif->idclientes."''>";
@@ -91,8 +113,9 @@ echo "</pre>";*/
 				 */
 				?>
 			</tr>
-			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+			<tr><td colspan='2'><center><input id='button' type='submit'value='Aceptar'/><center></td></tr>
 		</form>
 	</table>
+	</div></center>
 </body>
 </hmtl>
