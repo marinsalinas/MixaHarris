@@ -91,13 +91,14 @@ h2{
 
    #imagenesCatalogo
 {
-  display: inline-block;
+  display: block;
   height: 38em;
-  margin: 2em 0 0 230%;
+  margin: 1em 0 0 50%;
+  /*margin: 2em 0 0 230%;*/
   overflow-y: scroll;
-  position: absolute;
+  position: relative;
   vertical-align: top;
-  width: 69%;
+  width: 50%;
   -webkit-transition:all 1s ease;
 }
 	
