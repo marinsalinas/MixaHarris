@@ -10,9 +10,9 @@
 	
 	a{
 	/*background: rgb(217,201,154);*/
-	   border-radius: .2em;
+	  border-radius: .2em;
   	color: #ff9600;
-	   font-weight: bold;
+	  font-weight: bold;
   	font-family: 'Ubuntu Sans', sans-serif;
   	font-size: 1em;
   	margin: .2em;
@@ -281,11 +281,146 @@ body , html
 /*-----------------------style de CLIENTES PRINCIPIO*/
 #menuClientes
   {
-    width: 900px;
+    
     background:#ff9600;
     /*float:right;*/
     border-radius: 5px;
-    margin-left:3%;
-    padding: 15px;
+    /*margin-left:*/
+    padding: 5px;
     margin-top: 80px;
+    border-right: 10px;
   }
+
+
+  /*#menuClientes table{
+    border: 1px solid;
+    border-color:blue;
+    width: 600px;
+    background: #000000;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 700px;
+    color: #ff9600;
+
+  }*/
+table{
+  border:3px solid #000000;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+  /*border-collapse: collapse;*/
+ /* table-layout: auto;*/
+}
+th
+{
+background-color:#000000;
+color:white;
+}
+td{
+  border:1px solid #000000;  
+  border-left: none;
+  border-right: none;
+}
+
+table a{
+  color: #000;
+  text-decoration: none;
+}
+table a:hover{
+    background-color:#000;
+    color:#ff9600;
+   font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+    margin: .2em;
+    position: relative; 
+}
+
+
+
+
+/*--------------------------Altas cliente inicio------------------*/
+#menuAltaClientes{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 500px;
+}
+#tablaAltaCliente{
+  margin-bottom: 30px;
+}
+
+#tablaAltaCliente th{
+  background: none;
+  text-align: right;
+  color: #000;
+}
+#tablaAltaCliente td{
+  border:0px solid #000000;  
+  text-align: left;
+  font-size: 24px;
+
+}
+
+
+
+
+
+/*-------------Save CLientes-------Inicio*/
+#menuSaveClientes{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 500px;
+}
+#aF{
+    color: #000000;
+  text-decoration: none;
+}
+
+#aF:hover{
+   background-color:#000;
+    color:#ff9600;
+   font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+    margin: .2em;
+    position: relative; 
+}
+
+
+/*--------------Productos--------inicio*/
+#menuProductos{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 900px;
+}
+
+
+
+/*------------Proveedor--------inicio*/
+
+#menuProveedor{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 600px;
+}

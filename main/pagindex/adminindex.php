@@ -82,7 +82,8 @@
 <p class='hdm'>Usuarios:</p>
 <ul class='liad'>
 	<li><a href='../../reportes/action/cliente.php'>Ver informacion de  usuarios</a></li>
-	<li><a  href='../../formulario/view/alta_clientes.php'>Agregar nuevo usuario</a></li>
+	<li><a href='../../formulario/view/alta_clientes.php'>Agregar Usuario</a></li>
+	
 </ul>
 <p class='hdm'>Productos:</p>
 <ul class='liad'>

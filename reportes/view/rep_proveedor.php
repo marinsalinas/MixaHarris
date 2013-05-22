@@ -10,11 +10,11 @@ function lista_proveedor($proveedor) {
 
 echo "<table border=1 alling='center'>";
 echo "<tr>";
-echo "<td>ID</td>";//1 
-echo "<td>Proveedor</td>";//2
-echo "<td>Contacto</td>";//3
-echo "<td>Telefono</td>";//4
-echo "<td>Eliminar Registro</td>";
+echo "<th>ID</th>";//1 
+echo "<th>Proveedor</th>";//2
+echo "<th>Contacto</th>";//3
+echo "<th>Telefono</th>";//4
+echo "<th>Eliminar Registro</th>";
 echo "</tr>";
 
 foreach ($proveedor as $key => $prov) {
@@ -32,9 +32,10 @@ echo "</table>";
 function form_fliterProveedor(){
 
 echo "<form action='../action/filtro_proveedor.php' method='post'>";
-echo "Filtrar:";
+echo "</br></br>";
 echo "<input type= 'text' id='info' name='info'>"; 
-echo "<input type= 'submit'  value='BUSCAR' >"; 
+echo "<input type= 'submit'  value='BUSCAR' >";
+echo "</br></br>"; 
 echo "</form>";
 	
 }

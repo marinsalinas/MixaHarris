@@ -23,24 +23,20 @@
 	//echo "</div>";
 	?>
 	<div id='navegador'>
-			<div id='homeLogo'>MixaHarris Administrador</div>
+			<div id='homeLogo'>MixaHarris Administrador - Clientes</div>
 				<div id='navAdmin'>	
 					Hola, <?php echo $admin->administradorNombre;?> 
 					<form action='../../login/logout.php' id='blogout'>
 						<input id='button' type='submit' value='Logout'>	
 					</form> 
-					<a class="Bca" href="../../formupdate/view/edit_admin.php" title="Configurar datos personales">conf</a> 
+					<a class="Bca" href="../../main/pagindex/adminindex.php" title="Menú administrador">conf</a> 
 				 </div>
 		</div><!--navegador-->
 
-
-
-
-<div id='menuClientes'>
+<center><div id='menuClientes'>
 						<center><h2>MixaHarris</h2></center>
 						</br></br>
 							<p class='hdm'>Usuarios</p>
-						
 <?php
  //Este tambien lo modifique 10/may/2013
  //echo "action_cliente";
@@ -49,20 +45,10 @@
  require_once ("../view/rep_cliente.php");
  //tambien modifique este archivo con sus respectivos nombres de funcion
   $cliente=cliente_list();
-  lista_cliente ($cliente);
+  lista_cliente($cliente);
   form_fliterCliente();
 ?>
-					</div>
-
-
-
-
-
-
-
-
-
-
+					</div></center>
 
 
 </body>
