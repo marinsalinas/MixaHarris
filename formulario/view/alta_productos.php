@@ -15,7 +15,18 @@
 			<tr><td>Modelo:</td><td><input type='text' name='modelo'/></td></tr>
 			<tr><td>Descripci&oacute;n:</td><td><input type='text' name='descripcion'/></td></tr>
 			<tr><td>Precio:</td><td><input type='number' name='precio'/></td></tr>
-			<tr><td>Tipo:</td><td><input type='text' name='tipo'/></td></tr>
+			<tr><td>Tipo:</td><td>
+				<select name='tipo'>
+					<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+					<option value='Bajos'>Bajos</option>
+					<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+					<option value='Baterias'>Baterias</option>
+					<option value='Teclados'>Teclados</option>
+					<option value='Viento'>Instrumentos de viento</option>
+					<option value='Audio'>Audio y m&aacute;s</option>
+				</select>
+				</td></tr>
+				<!--<td><input type='text' name='tipo'/></td></tr>-->
 			<tr><td>Garantia:</td>
 				<td><input type='radio' name='garantia' value='1' />Si
 				<input type='radio' name='garantia' value='0' />No</td>
