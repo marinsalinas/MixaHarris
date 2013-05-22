@@ -7,7 +7,7 @@
 $cfg["db_host"]="localhost";    //dirección del host de la Base de datos
 $cfg["db_name"]="mixaharris";    //nombre de la base de datos
 $cfg["db_user"]="root";   //nombre del usuario del administrador de la base de datos
-$cfg["db_pass"]="salinass27_";    //password la contraseña cambia segun el host de la base de datos
+$cfg["db_pass"]="";    //password la contraseña cambia segun el host de la base de datos
 
 function getdb(){
 	global $cfg;

@@ -5,17 +5,50 @@
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
-<title>MixaHarris - Formulario Productos</title>
+	<link rel='stylesheet' type='text/css' href = "../../lib/stylePro.css">
+	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/lib.js"></script>
+<title>MixaHarris - Alta Productos</title>
 <body>
-	<h1>Formularios Productos</h1>
-	<table>
+
+
+	<?php
+	session_start();
+	//lo mismo
+	require_once("../../login/valid.php");
+	require_once("../../login/validpriv.php");
+	validAdmin();
+	//echo "<h1>MixaHarris - Admin Index Nuevo </h1>";
+	$admin = $_SESSION['usuario'];
+	//print_r($usuario);
+	//echo "<div id='navegador'>";
+		//echo"<p>"."Bienvenido ".$admin->administradorNombre."<a href='../../login/logout.php'>Logout</a></p>";
+	//echo "</div>";
+	?>
+	<div id='navegador'>
+			<div id='homeLogo'>MixaHarris Administrador - Alta Productos</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $admin->administradorNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../main/pagindex/adminindex.php" title="Menú administrador">conf</a> 
+				 </div>
+		</div><!--navegador-->
+<center><div id='menuAltaClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'>Alta de Productos</p>
+
+	<table id='tablaModCliente'>
 		<form name='altasProductos' action="../action/save_productos.php" method='post' accept-charset='utf-8'>
-			<tr><td>Nombre de Producto:</td><td><input type='text' name='nombre'/></td></tr>
-			<tr><td>Marca:</td><td><input type='text' name='marca'/></td></tr>
-			<tr><td>Modelo:</td><td><input type='text' name='modelo'/></td></tr>
-			<tr><td>Descripci&oacute;n:</td><td><input type='text' name='descripcion'/></td></tr>
-			<tr><td>Precio:</td><td><input type='number' name='precio'/></td></tr>
-			<tr><td>Tipo:</td><td>
+			<tr><th>Nombre de Producto:</th><td><input type='text' name='nombre'/></td></tr>
+			<tr><th>Marca:</th><td><input type='text' name='marca'/></td></tr>
+			<tr><th>Modelo:</th><td><input type='text' name='modelo'/></td></tr>
+			<tr><th>Descripci&oacute;n:</th><td><input type='text' name='descripcion'/></td></tr>
+			<tr><th>Precio:</th><td><input type='number' name='precio'/></td></tr>
+			<tr><th>Tipo:</th><td>
 				<select name='tipo'>
 					<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
 					<option value='Bajos'>Bajos</option>
@@ -27,11 +60,11 @@
 				</select>
 				</td></tr>
 				<!--<td><input type='text' name='tipo'/></td></tr>-->
-			<tr><td>Garantia:</td>
+			<tr><th>Garantia:</th>
 				<td><input type='radio' name='garantia' value='1' />Si
 				<input type='radio' name='garantia' value='0' />No</td>
 			</tr>
-			<tr><td>Proveedor:</td><td>
+			<tr><th>Proveedor:</th><td>
 				<select name='proveedor'>
 					<?php
 					require_once('../lib/formularios_lib.php');
@@ -43,8 +76,10 @@
 				</select>
 				</td>
 			</tr>
-			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+			<tr><td colspan='2'></br><center><input id ='button' type='submit'value='Aceptar'/></center></td></tr>
 		</form>
 	</table>
+
+</div></center><!--Div de menu-->
 </body>
-</hmtl>
+</hmtl>	

@@ -9,14 +9,34 @@
 	validAdmin();
 	$adminID =  $_SESSION['usuario']->idadministrador; //este es el valor del id del administrador en esta sesion
 	$adModif = selectAdminConID($adminID);
+	$admin = $_SESSION['usuario'];
 	?>
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
+	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/lib.js"></script>
 <title>MixaHarris - Formulario Administrador</title>
 <body>
-	<h1>Modificar Registro del Administrador</h1>
-	<table>
+	<div id='navegador'>
+			<div id='homeLogo'>MixaHarris Administrador - Modificar Datos Administrador</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $admin->administradorNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../main/pagindex/adminindex.php" title="Menú administrador">conf</a> 
+				 </div>
+		</div><!--navegador-->
+
+<center><div id='menuModClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'>Editar datos</p>
+
+		<table id="tablaModCliente">
 		<form name='editAdmin' action="../action/save_adminEdit.php" method='post' accept-charset='utf-8'>
 			<tr><td>Nombre(s):</td><td>
 				<input type='text' name='nombre' value=<?php echo "'".$adModif->administradorNombre."'";?>/></td></tr>
@@ -85,8 +105,9 @@
 				 */
 				?>
 			</tr>
-			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+			<tr><td colspan='2'></br><center><input id='button' type='submit'value='Aceptar'/></center></td></tr>
 		</form>
 	</table>
+	</div></center>
 </body>
 </hmtl>

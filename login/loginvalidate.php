@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name='description' content=''/>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+	<link rel='stylesheet' type='text/css' href = "../lib/styleUser.css">
+	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../../lib/jquery.js"></script>
+	<script type="text/javascript" src="../../lib/lib.js"></script>
 	<title>Usuer o Contraseña Incorrecta</title>
 </head>
 <body>
+	<div id='navegador'>
+			<div id='homeLogo' onclick="location.href='../index.html'">MixaHarris Home</div>
+			<div id='login'>	
+	
+			</div>
+		</div>
+	
+
+<center><div id='menuAltaClientes'>
+						</br></br>
+							<p class='hdm'>Login ERROR</p></br></br>
 <?php
 session_start();
 require_once("../config.php");
@@ -65,5 +82,19 @@ if ($priv == 0) {
 //print_r($usuario);
 //echo "</pre>";
 ?>
+</br></br>
+<table id="tablaAltaCliente">
+		<form name='login' action='loginvalidate.php' method='post'/>
+		<tr><td>Tipo de Usuario:</td><td><select name='tipoLogin'><option value='1'>Cliente</option><option value='0'>Administrador</option></select></td></tr>
+		<tr><td>Usuario:</td><td><input type='text' name='user'></td></tr>
+		<tr><td>Contraseña:</td><td><input type='password' name='pass'></td></tr>
+		<tr><td colspan='2'><center><input id='button' type='submit' value='Entrar' /></center></td></tr>
+		</form>
+	</table>	
+
+</br></br>
+
+</div></center><!--Div de menu-->
+
 </body>
 </html>
