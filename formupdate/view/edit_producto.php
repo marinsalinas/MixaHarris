@@ -28,10 +28,10 @@ $prodModif= selectProductoConID($_GET['id']);
 			<tr><td>Tipo:</td><td><input type='text' name='tipo' value=<?php echo "'".$prodModif->productosTipo."'"?>/></td></tr>
 			<tr><td>Garantia:</td>
 				<?php
-				if($prodModif == 1){
+				if($prodModif->productosGarantia == 1){
 				echo "<td><input type='radio' name='garantia' value='1' checked/>Si";
 				echo "<input type='radio' name='garantia' value='0' />No</td>";
-				} elseif ($prodModif == 0){
+				} elseif ($prodModif->productosGarantia == 0){
 					echo "<td><input type='radio' name='garantia' value='1'/>Si";
 				echo "<input type='radio' name='garantia' value='0' checked/>No</td>";
 				}else{
