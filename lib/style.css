@@ -103,7 +103,7 @@ h2{
 {
   display: inline-block;
   height: 38em;
-  margin: 2em 0 0 50%;
+  margin: 4em 0 0 230%;
   overflow-y: scroll;
   position: absolute;
   vertical-align: top;
@@ -116,12 +116,12 @@ h2{
 {
   display: inline-block;
   vertical-align: top;
-  width: 40%;
+  width: 49%;
 }
 
 .productos img
 {
-  width: 30%;
+  width: 100%;
 }
 	
 	/*--------STYLE ADMIN------*/
@@ -232,3 +232,10 @@ body , html
     }
 
   }
+
+  /*CARPETAS*/
+
+  #carpetas{
+    display: none;
+  }
+
