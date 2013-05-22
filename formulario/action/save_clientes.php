@@ -13,11 +13,11 @@
 <title>MixaHarris - Se dio de alta</title>
 <body>
 		<?php
-	session_start();
+	//session_start();
 	//lo mismo
-	require_once("../../login/valid.php");
-	require_once("../../login/validpriv.php");
-	validAdmin();
+	//require_once("../../login/valid.php");
+	//require_once("../../login/validpriv.php");
+	//validAdmin();
 	//echo "<h1>MixaHarris - Admin Index Nuevo </h1>";
 	$admin = $_SESSION['usuario'];
 	//print_r($usuario);
