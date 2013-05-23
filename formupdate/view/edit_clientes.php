@@ -9,6 +9,7 @@
 	validUser();
 	$idusr=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
 	$usrModif = selectClienteConID($idusr);
+	$usuario = $_SESSION['usuario'];
 	/*echo"<pre>";
 	print_r($usrModif);
 	echo"</pre>";*/
@@ -16,10 +17,36 @@
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
+		<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<script type="text/javascript" src="lib/lib.js"></script>
+		<title>MixaHarris User</title>
 <title>MixaHarris - Formulario Clientes</title>
 <body>
-	<h1>Modificar Registro del Ciente</h1>
-	<table>
+
+<div id='navegador'>
+			<div id='homeLogo' onclick="location.href='../../main/store/home.php'">MixaHarris User</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $usuario->clientesNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../pagindex/userindex.php" title="Configurar datos personales">conf</a> 
+				 </div>
+		</div><!--navegador-->
+
+
+
+
+<center><div id='menuModClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'>Editar datos</p>
+
+
+
+	<table  id="tablaModCliente">
 		<form name='editClientes' action="../action/save_clientesEdit.php" method='post' accept-charset='utf-8'>
 			<tr><td>Nombre(s):</td><td>
 				<input type='text' name='nombre' value=<?php echo "'".$usrModif->clientesNombre."'"; ?>/></td></tr>
@@ -92,8 +119,9 @@
 				 */
 				?>
 			</tr>
-			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+			<tr><td colspan='2'><center><input id='button' type='submit'value='Aceptar'/</center></td></tr>
 		</form>
 	</table>
+		</div></center>
 </body>
 </hmtl>

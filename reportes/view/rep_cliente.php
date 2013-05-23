@@ -41,7 +41,7 @@ echo "<td>".$client->clientesSexo."</td>";
 echo "<td>".$client->clientesOcupacion."</td>";
 echo "<td>".$client->clientesUsername."</td>";
 //echo "<td>"."<a href=del_cliente.php?id=".$client->idclientes.">Eliminar</a></td> ";
-echo "<td>"."<input type='button' onclick='eliminarUsr(".$client->idclientes.")' value='Eliminar'></td> ";
+echo "<td>"."<input id='button' type='button' onclick='eliminarUsr(".$client->idclientes.")' value='Eliminar'></td> ";
 echo "<td>"."<a href=../../formupdate/view/edit_clienteRep.php?id=".$client->idclientes.">Editar</a></td> ";
 echo "</tr>";	
 }

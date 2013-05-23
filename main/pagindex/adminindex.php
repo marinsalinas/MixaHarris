@@ -44,29 +44,29 @@
 				<section id='sidebar'>
 				<nav>
 				<figure class="cuadricula">
-					<img src="../../images/btn1.png">
+					<img src="../../images/btn1.png"  onclick="location.href='../store/store.php?seccion=GElectricas'">
 				</figure>
 
 				<figure class="cuadricula">
-					<img src="../../images/btn2.png">
+					<img src="../../images/btn2.png" onclick="location.href='../store/store.php?seccion=Bajos'">
 				</figure>
 
 				<figure class="cuadricula">
-					<img src="../../images/btn3.png">
+					<img src="../../images/btn3.png" onclick="location.href='../store/store.php?seccion=GAcusticas'">
 				</figure>
 
 				<figure class="cuadricula">
-					<img src="../../images/btn4.png">
+					<img src="../../images/btn4.png" onclick="location.href='../store/store.php?seccion=Baterias'">
 				</figure>
 				<figure class="cuadricula">
-					<img src="../../images/btn5.png">
+					<img src="../../images/btn5.png" onclick="location.href='../store/store.php?seccion=Teclados'">
 				</figure>
 				</figure>
 				<figure class="cuadricula">
-					<img src="../../images/btn6.png">
+					<img src="../../images/btn6.png" onclick="location.href='../store/store.php?seccion=Viento'">
 				</figure>
 				<figure class="cuadricula">
-					<img src="../../images/btn7.png">
+					<img src="../../images/btn7.png" onclick="location.href='../store/store.php?seccion=Audio'">
 				</figure>
 				</nav>
 				</section>

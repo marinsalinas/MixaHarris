@@ -32,10 +32,48 @@
 					<a class="Bca" href="../store/home.php" title="Configurar datos personales">conf</a> 
 				 </div>
 		</div><!--navegador-->
+
+
+<center><div id='menuModClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
 	<p class='hdm'>Personal:</p>
 <ul class='liad'>
 	<li><a href='../../formupdate/view/edit_clientes.php'>Modificar mis datos</a></li>
 	<li><a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a></li>
 </ul>
+</div></center>		
+
+
+		<section id='sidebar'>
+			<nav>
+				<figure class="cuadricula">
+					<img id="GElectricas" class="botonSeccion" src="../../images/cuadro1.png" onclick="location.href='store.php?seccion=GElectricas'">
+				</figure>
+
+				<figure class="cuadricula">
+					<img  id="Bajos" class="botonSeccion" src="../../images/cuadro2.png" onclick="location.href='store.php?seccion=Bajos'">
+				</figure>
+				</figure>
+
+				<figure class="cuadricula">
+					<img id="GAcusticas" class="botonSeccion" src="../../images/cuadro3.png" onclick="location.href='store.php?seccion=GAcusticas'">
+				</figure>
+
+				<figure class="cuadricula">
+					<img id="Baterias" class="botonSeccion" src="../../images/cuadro4.png" onclick="location.href='store.php?seccion=Baterias'">
+				</figure>
+				<figure class="cuadricula">
+					<img id="Teclados" class="botonSeccion" src="../../images/cuadro5.png" onclick="location.href='store.php?seccion=Teclados'">
+				</figure>
+				</figure>
+				<figure class="cuadricula">
+					<img id="Viento" class="botonSeccion" src="../../images/cuadro6.png" onclick="location.href='store.php?seccion=Viento'">
+				</figure>
+				<figure class="cuadricula">
+					<img id="Audio" class="botonSeccion" src="../../images/cuadro7.png" onclick="location.href='store.php?seccion=Audio'">
+				</figure>
+			</nav>
+		</section>
 </body>
 </html>

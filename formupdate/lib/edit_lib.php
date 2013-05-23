@@ -87,7 +87,7 @@ function UpdateProductoConID($prodModif, $idProd)
 //echo "<br>".$sql;
 	$result= mysql_query($sql);
 		if ($result >0){
-			echo "Se ha ingresado la informacion exitosamente ".mysql_info();
+			echo "Se ha ingresado la informacion exitosamente ";
 		}
 		else {
 			echo  "Existe una inconsistencia en informacion";

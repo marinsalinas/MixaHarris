@@ -23,7 +23,9 @@ echo "<td>".$prov->idproveedor."</td>";
 echo "<td>".$prov->proveedorNombre."</td>";
 echo "<td>".$prov->proveedorContacto."</td>";
 echo "<td>".$prov->proveedorTelefono."</td>";
-echo "<td>"."<a href=del_proveedor.php?id=".$prov->idproveedor.">Eliminar</a></td>";
+//echo "<td>"."<a href=del_proveedor.php?id=".$prov->idproveedor.">Eliminar</a></td>";
+echo "<td>"."<input id='button' type='button' onclick='eliminarProv(".$prov->idproveedor.")' value='Eliminar'></td> ";
+
 echo "</tr>";	
 }
 echo "</table>";

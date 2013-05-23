@@ -41,7 +41,7 @@ if (empty($_SESSION['usuario'])){
 	echo "<div id='navegador'>
 			<div id='homeLogo'>MixaHarris Administrador - Alta Clientes</div>
 				<div id='navAdmin'>	
-					Hola, {$admin->administradorNombre}?> 
+					Hola, {$admin->administradorNombre} 
 					<form action='../../login/logout.php' id='blogout'>
 						<input id='button' type='submit' value='Logout'>	
 					</form> 
@@ -83,6 +83,8 @@ if (empty($_SESSION['usuario'])){
 		echo  "<center><h2>Existe una inconsistencia en informacion</center></h2>";
 	}
 	?>
+</br></br></br>
+	<a id='aFondo' href='../../reportes/action/cliente.php'>Aceptar</a>	
 </br></br></br>
 	</div></center>
 </body>

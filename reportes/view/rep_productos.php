@@ -32,7 +32,8 @@ echo "<td>".$prod->productosDescripcion."</td>";
 echo "<td>".$prod->productosPrecio."</td>";
 echo "<td>".$prod->productosTipo."</td>";
 echo "<td>".$prod->productosGarantia."</td>";
-echo "<td>"."<a href=del_producto.php?id=".$prod->idproductos.">Eliminar</a></td> ";
+//echo "<td>"."<a href=del_producto.php?id=".$prod->idproductos.">Eliminar</a></td> ";
+echo "<td>"."<input id='button' type='button' onclick='eliminarProd(".$prod->idproductos.")' value='Eliminar'></td> ";
 echo "<td>"."<a href=../../formupdate/view/edit_producto.php?id=".$prod->idproductos.">Editar</a></td>";
 echo "</tr>";	
 }
@@ -49,9 +50,4 @@ echo "</br></br>";
 echo "</form>";
 	
 }
-
-
-
-
-
 ?>

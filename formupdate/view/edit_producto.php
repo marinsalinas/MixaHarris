@@ -1,7 +1,11 @@
 <?php
+session_start();
+require_once("../../login/valid.php");
+require_once("../../login/validpriv.php");
 require_once("../lib/edit_lib.php");
 require_once('../../formulario/lib/formularios_lib.php');
 $prodModif= selectProductoConID($_GET['id']);
+$admin = $_SESSION['usuario'];
 ?>
 <!DOCTYPE html>
 <html lang='es'>
@@ -10,23 +14,43 @@ $prodModif= selectProductoConID($_GET['id']);
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
+	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/lib.js"></script>
 <title>MixaHarris - Editar Productos</title>
 <body>
-	<h1>Formularios para Modificar Productos</h1>
-	<table>
+
+	<div id='navegador'>
+			<div id='homeLogo'>MixaHarris Administrador - Modificar Producto</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $admin->administradorNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../main/pagindex/adminindex.php" title="Menú administrador">conf</a> 
+				 </div>
+		</div><!--navegador-->
+
+
+<center><div id='menuModClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'>Editar datos</p>
+	<table id="tablaModCliente">
 		<form name='UpdateProductos' action="../action/save_productosEdit.php" method='post' accept-charset='utf-8'>
 			<input type='hidden' name ='id' value=<?php echo "'".$prodModif->idproductos."'" //es para el id ?> />
-			<tr><td>Nombre de Producto:</td><td>
+			<tr><th>Nombre de Producto:</th><td>
 				<input type='text' name='nombre' value=<?php echo "'".$prodModif->productosNombre."'"?>/></td></tr>
-			<tr><td>Marca:</td><td>
+			<tr><th>Marca:</th><td>
 				<input type='text' name='marca' value=<?php echo "'".$prodModif->productosMarca."'"?>/></td></tr>
-			<tr><td>Modelo:</td><td>
+			<tr><th>Modelo:</th><td>
 				<input type='text' name='modelo' value=<?php echo "'".$prodModif->productosModelo."'"?>/></td></tr>
-			<tr><td>Descripci&oacute;n:</td><td>
+			<tr><th>Descripci&oacute;n:</th><td>
 				<input type='text' name='descripcion' value=<?php echo "'".$prodModif->productosDescripcion."'"?>/></td></tr>
-			<tr><td>Precio:</td><td><input type='text' name='precio' value=<?php echo "'".$prodModif->productosPrecio."'"?>/></td></tr>
-			<tr><td>Tipo:</td><td><input type='text' name='tipo' value=<?php echo "'".$prodModif->productosTipo."'"?>/></td></tr>
-			<tr><td>Garantia:</td>
+			<tr><th>Precio:</th><td><input type='text' name='precio' value=<?php echo "'".$prodModif->productosPrecio."'"?>/></td></tr>
+			<tr><th>Tipo:</th><td><input type='text' name='tipo' value=<?php echo "'".$prodModif->productosTipo."'"?>/></td></tr>
+			<tr><th>Garantia:</th>
 				<?php
 				if($prodModif->productosGarantia == 1){
 				echo "<td><input type='radio' name='garantia' value='1' checked/>Si";
@@ -40,7 +64,7 @@ $prodModif= selectProductoConID($_GET['id']);
 				}
 				?>
 			</tr>
-			<tr><td>Proveedor:</td><td>
+			<tr><th>Proveedor:</th><td>
 				<select name='proveedor'>
 					<option value ='-1'>Selecciona un proveedor</option>
 					<?php
@@ -56,8 +80,9 @@ $prodModif= selectProductoConID($_GET['id']);
 				</select>
 				</td>
 			</tr>
-			<tr><td><input type='submit'value='Aceptar'/></td></tr>
+			<tr><td colspan='2'><center><input id='button' type='submit'value='Aceptar'/></center></td></tr>
 		</form>
 	</table>
+	</div></center>
 </body>
 </hmtl>

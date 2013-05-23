@@ -1,7 +1,7 @@
 <?php
 require_once('../../config.php');
 
-$info=$_GET['id'];
+$info=$_POST['id'];
 //echo $info;
 
 $sql = "DELETE FROM mixaharris.proveedor WHERE idproveedor=$info";

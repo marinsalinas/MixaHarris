@@ -1,11 +1,9 @@
 <?php
 require_once("../../config.php");
-
 $passActual = $_POST['actual'];
 $passNuevo = $_POST['nuevo'];
 $id = $_POST['id'];
 $privilegio = $_POST['privilegio'];
-
 $passActual =md5($passActual);
 //Esta funcion me retorna el password del cliente/
 function selectpasswordCliente($idCliente)

@@ -9,6 +9,7 @@
 	validUser();
 	$idusr=$_SESSION['usuario']->idclientes; //este es el valor del id del usuario en esta sesion
 	$usrModif = selectClienteConID($idusr);
+	$usuario = $_SESSION['usuario'];
 	/*echo"<pre>";
 	print_r($usrModif);
 	echo"</pre>";*/
@@ -16,9 +17,34 @@
 	<meta charset='utf-8'/>
 	<meta name='description' content=''/>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
+	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
+		<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<script type="text/javascript" src="lib/lib.js"></script>
+		<title>MixaHarris User</title>
+<title>MixaHarris - Formulario Clientes</title>
+
 <title>MixaHarris - Modificar Registros de Clientes</title>
 <body>
-	<h1>Se obtuvieron los datos para modificar</h1>
+
+
+	<div id='navegador'>
+			<div id='homeLogo' onclick="location.href='../../main/store/home.php'">MixaHarris User</div>
+				<div id='navAdmin'>	
+					Hola, <?php echo $usuario->clientesNombre;?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href="../../main/pagindex/userindex.php" title="Configurar datos personales">conf</a> 
+				 </div>
+		</div><!--navegador-->
+
+<center><div id='menuModClientes'>
+	<center><h2>MixaHarris</h2></center>
+						</br></br>
+							<p class='hdm'></p>
+
+
 	<?php
 	$clienteModif=array();
 	$datosCliente= array("nombre","apellidos", "direccion","CP","email", "tel", "username", "cel", "ocupacion",
@@ -31,9 +57,14 @@
 	/*echo "<pre>";
 	print_r($clienteModif);
 	echo "</pre>";*/
-	echo "<p>";
+	//echo "<p>";
+	echo "</br></br>";
 	updateClienteConID($clienteModif, $_SESSION['usuario']->idclientes);
-	echo"<p>";
-	?>	
+	echo "</br></br>";
+	//echo"<p>";
+	?>
+
+	<a id='aFondo' href='../../main/store/home.php'>Aceptar</a>
+			</div></center>	
 </body>
 </hmtl>
