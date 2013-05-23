@@ -35,7 +35,7 @@ session_start();
 </head>
 <body>
 	<div id='navegador'>
-			<div id='homeLogo' onclick="location.href='../index.html'">MixaHarris Home</div>
+			<div id='homeLogo' onclick="location.href='../../index.html'">MixaHarris Home</div>
 			<div id='login'>	
 	
 			</div>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 15-05-2013 a las 19:03:27
+-- Tiempo de generación: 23-05-2013 a las 04:37:42
 -- Versión del servidor: 5.5.31
 -- Versión de PHP: 5.4.14
 
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   PRIMARY KEY (`idclientes`),
   UNIQUE KEY `idclientes_UNIQUE` (`idclientes`),
   UNIQUE KEY `clientesUsername_UNIQUE` (`clientesUsername`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabla de Clientes' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabla de Clientes' AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -157,32 +157,33 @@ CREATE TABLE IF NOT EXISTS `productos` (
   PRIMARY KEY (`idproductos`,`proveedor_idproveedor`),
   UNIQUE KEY `idproductos_UNIQUE` (`idproductos`),
   KEY `fk_productos_proveedor_idx` (`proveedor_idproveedor`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
 INSERT INTO `productos` (`idproductos`, `productosNombre`, `productosMarca`, `productosModelo`, `productosDescripcion`, `productosPrecio`, `productosTipo`, `productosGarantia`, `proveedor_idproveedor`) VALUES
-(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra electrica', 20000, 'Instrumento', 1, 2),
-(6, 'Guitarra Eléctrica', 'Fender', 'Jaguar', 'Guitarra Eléctrica', 19000, 'Guitarras', 1, 4),
-(7, 'Guitarra electrica', 'Fender', 'Jazz Master', 'Guitarra electrica', 15000, 'Guitarras', 1, 4),
-(8, 'Guitarra electrica', 'Gibson', 'FireBird', 'Guitarra electrica', 17000, 'Guitarras', 1, 12),
-(9, 'Guitarra electrica', 'Gibson', 'Moderne', 'Guitarra electrica', 13000, 'Guitarras', 1, 12),
-(10, 'Guitarra electrica', 'Gibson', 'Flying V', 'Guitarra electrica', 23000, 'Guitarras', 1, 12),
-(11, 'Guitarra electrica', 'Gibson', 'Explorer', 'Guitarra electrica', 15000, 'Guitarras', 1, 12),
-(12, 'Guitarra electrica', 'Gibson', 'SG', 'Guitarra electrica', 10000, 'Guitarras', 1, 12),
-(13, 'Guitarra electrica', 'Fender', 'Mustang', 'Guitarra electrica', 14000, 'Guitarras', 1, 4),
-(14, 'Guitarra electrica', 'Fender', 'Stratocaster', 'Guitarra electrica', 19000, 'Guitarras', 1, 4),
-(15, 'Guitarra electrica', 'Fender', 'Squier', 'Guitarra electrica', 12000, 'Guitarras', 1, 4),
-(16, 'Guitarra acustica', 'Yamaha', 'GC', 'Guitarra acustica', 5000, 'Guitarras', 1, 1),
-(17, 'Guitarra acustica', 'Yamaha', 'CG', 'Guitarra acustica', 3000, 'Guitarras', 0, 1),
-(18, 'Guitarra acustica', 'Yamaha', 'CS', 'Guitarra acustica', 4500, 'Guitarras', 0, 1),
-(19, 'Guitarra acustica', 'Yamaha', 'C', 'Guitarra acustica', 4000, 'Guitarras', 1, 1),
+(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra Electrica', 20000, 'GElectricas', 1, 2),
+(6, 'Guitarra ElÃ©ctrica', 'Fender', 'Jaguar', 'GElectricas', 19000, 'GElectricas', 1, 4),
+(7, 'Guitarra elÃ©ctrica', 'Fender', 'Jazz Master', 'GElectricas', 15000, 'GElectricas', 1, 4),
+(8, 'Guitarra electrica', 'Gibson', 'FireBird', 'GElectricas', 17000, 'GElectricas', 1, 12),
+(9, 'Guitarra electrica', 'Gibson', 'Moderne', 'GElectricas', 13000, 'GElectricas', 1, 12),
+(10, 'Guitarra electrica', 'Gibson', 'Flying V', 'GElectricas', 23000, 'GElectricas', 1, 12),
+(11, 'Guitarra electrica', 'Gibson', 'Explorer', 'GElectricas', 15000, 'GElectricas', 1, 12),
+(12, 'Guitarra electrica', 'Gibson', 'SG', 'GElectricas', 10000, 'GElectricas', 1, 12),
+(13, 'Guitarra electrica', 'Fender', 'Mustang', 'GElectricas', 14000, 'GElectricas', 1, 4),
+(14, 'Guitarra electrica', 'Fender', 'Stratocaster', 'GElectricas', 19000, 'GElectricas', 0, 4),
+(15, 'Guitarra electrica', 'Fender', 'Squier', 'GElectricas', 12000, 'GElectricas', 1, 4),
+(16, 'Guitarra acustica', 'Yamaha', 'GC', 'Guitarra acustica', 5000, 'GAcusticas', 1, 1),
+(17, 'Guitarra acustica', 'Yamaha', 'CG', 'Guitarra acustica', 3000, 'GAcusticas', 0, 1),
+(18, 'Guitarra acustica', 'Yamaha', 'CS', 'Guitarra acustica', 4500, 'GAcusticas', 0, 1),
+(19, 'Guitarra acustica', 'Yamaha', 'C', 'Guitarra acustica', 4000, 'GAcusticas', 1, 1),
 (20, 'Bateria', 'Mapex', 'Saturn', 'Bateria', 33000, 'Baterias', 1, 5),
 (21, 'Bateria', 'Mapex', 'QR', 'Bateria', 25000, 'Baterias', 1, 5),
 (22, 'Bateria', 'Mapex', 'Pro M', 'Bateria', 25000, 'Baterias', 1, 5),
-(31, 'Saxofon', 'Yamaha', 'YAS-23', 'Saxofon Alto', 15000, 'Saxofones', 1, 1);
+(31, 'Saxofon', 'Yamaha', 'YAS-23', 'Saxofon Alto', 15000, 'Viento', 1, 1),
+(32, 'DJ PAD', 'M-AUDIO', 'YS0090', 'Buena Calida', 4500, 'Audio', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -197,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `proveedor` (
   `proveedorTelefono` bigint(20) NOT NULL,
   PRIMARY KEY (`idproveedor`),
   UNIQUE KEY `idproveedor_UNIQUE` (`idproveedor`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Volcado de datos para la tabla `proveedor`
@@ -214,7 +215,8 @@ INSERT INTO `proveedor` (`idproveedor`, `proveedorNombre`, `proveedorContacto`, 
 (9, 'Instrumentos de Paracho', 'Jose Hernandez', 98985423),
 (10, 'DW Perfformance', 'James Bell', 78313212),
 (11, 'Marshal', 'Susana Zabaleta', 12435465),
-(12, 'Gibson Inc.', 'Brad Pit', 12231212);
+(12, 'Gibson Inc.', 'Brad Pit', 12231212),
+(13, 'MediHistMusic', 'Marin Salinas', 84488585);
 
 --
 -- Restricciones para tablas volcadas

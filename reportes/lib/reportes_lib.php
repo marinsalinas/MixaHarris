@@ -112,7 +112,7 @@ function cliente_fliter($info)
 		OR clientesCP LIKE '%$info%' OR clientesEmail LIKE '%$info%' OR clientesTelefono LIKE '%$info%'
 		OR clientesCelular LIKE '%$info%' OR clientesUsername LIKE '%$info%' OR clientesOcupacion LIKE '%$info%'
 		OR clientesNacimiento LIKE '%$info%' OR clientesSexo LIKE '%$info%'";
-	 	//echo "<br>".$sql;
+	 	echo "<br>".$sql;
 	 	$cliente= array();
 		$result= mysql_query($sql);
 		$i= 0;
