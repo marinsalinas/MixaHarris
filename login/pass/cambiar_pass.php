@@ -16,7 +16,6 @@ session_start();
 	$priv = null;
 	foreach ($user as $key => $atrib) {
 		$priv = $atrib;
-		break;
 	}
 	//es para poner en nombre en la pagina
 	$nombre =(($priv == 1) ? $user->clientesNombre : $user->administradorNombre);
