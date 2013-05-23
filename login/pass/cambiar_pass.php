@@ -12,6 +12,13 @@ session_start();
 		$id = $atrib;
 		break;
 	}
+
+	$priv = null;
+	foreach ($user as $key => $atrib) {
+		$priv = $atrib;
+		break;
+	}
+
 	//echo "<br>";
 	//print_r($privilegio);
 ?>
@@ -19,6 +26,7 @@ session_start();
 <table id='changePassword'>
 	<form name='altasProveedor' action="validpass.php" method='post' accept-charset='utf-8'>
 		<input type='hidden' name='id' value=<?php echo "'".$id."'" ?>/>
+		<input type='hidden' name='privilegio' value=<?php echo "'".$priv."'" ?>/>
 		<tr><td>Contraseña Actual:</td><td><input type='password' name='actual'/></td></tr>
 		<tr><td>Nueva Contraseña:</td><td><input type='password' name='nuevo'/></td></tr>
 		<tr><td colspan='2'></br><center><input id='button' type='submit'value='Aceptar'/></center></td></tr>
