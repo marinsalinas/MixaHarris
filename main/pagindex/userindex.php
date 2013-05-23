@@ -32,6 +32,10 @@
 					<a class="Bca" href="../store/home.php" title="Configurar datos personales">conf</a> 
 				 </div>
 		</div><!--navegador-->
-	
+	<p class='hdm'>Personal:</p>
+<ul class='liad'>
+	<li><a href=''>Modificar mis datos</a></li>
+	<li><a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a></li>
+</ul>
 </body>
 </html>

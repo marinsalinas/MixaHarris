@@ -78,7 +78,11 @@
 							<p class='hdm'>Menú de configuracion de MixaHarris</p>
 <pre class='preAd'>
 
-	
+<p class='hdm'>Personal:</p>
+<ul class='liad'>
+	<li><a href=''>Modificar mis datos</a></li>
+	<li><a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a></li>
+</ul>	
 <p class='hdm'>Usuarios:</p>
 <ul class='liad'>
 	<li><a href='../../reportes/action/cliente.php'>Ver informacion de  usuarios</a></li>
