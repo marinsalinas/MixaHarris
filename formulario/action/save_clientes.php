@@ -15,9 +15,9 @@
 		<?php
 	session_start();
 	//lo mismo
-	require_once("../../login/valid.php");
-	require_once("../../login/validpriv.php");
-	validAdmin();
+	//require_once("../../login/valid.php");
+	//require_once("../../login/validpriv.php");
+	//validAdmin();
 	//echo "<h1>MixaHarris - Admin Index Nuevo </h1>";
 if (empty($_SESSION['usuario'])){
 	echo "<div id='navegador'>
