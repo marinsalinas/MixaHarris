@@ -34,7 +34,7 @@
 		</div><!--navegador-->
 	<p class='hdm'>Personal:</p>
 <ul class='liad'>
-	<li><a href=''>Modificar mis datos</a></li>
+	<li><a href='../../formupdate/view/edit_clientes.php'>Modificar mis datos</a></li>
 	<li><a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a></li>
 </ul>
 </body>

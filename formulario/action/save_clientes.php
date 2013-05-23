@@ -7,8 +7,8 @@
 	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'/>
 	<link rel='stylesheet' type='text/css' href = "../../lib/styleAdmin.css">
 	<link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="lib/jquery.js"></script>
-	<script type="text/javascript" src="lib/lib.js"></script>
+	<script type="text/javascript" src="../../lib/jquery.js"></script>
+	<script type="text/javascript" src="../../lib/lib.js"></script>
 	
 <title>MixaHarris - Se dio de alta</title>
 <body>
@@ -23,7 +23,7 @@ if (empty($_SESSION['usuario'])){
 	echo "<div id='navegador'>
 			<div id='homeLogo'>MixaHarris Home</div>
 			<div id='login'>	
-				<form id='lin' name='LogIN' action='login/loginvalidate.php' method='post' accept-charset='utf-8'>
+				<form id='lin' name='LogIN' action='../../login/loginvalidate.php' method='post' accept-charset='utf-8'>
 				Entrar como: <select name='tipoLogin' id='tipoLogin'><option value='1'>Cliente</option><option value='0'>Admin</option></select>
 				Usuario: <input class='form' type='text' name='user' id='user'>
 				Contraseña: <input class='form' type='password' name='pass' id='pass'>
