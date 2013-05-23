@@ -38,7 +38,7 @@
 <center><div id='menuAltaClientes'>
 	<center><h2>MixaHarris</h2></center>
 						</br></br>
-							<p class='hdm'>Alta de Usuarios</p>
+							<p class='hdm'>Alta de Proveedores</p>
 
 
 

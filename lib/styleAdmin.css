@@ -500,3 +500,19 @@ table a:hover{
   font-size: 20px;
   font-weight:  bold;
 }
+
+#homeLogo{
+  font-family: 'Mouse Memoirs', sans-serif, tahoma;
+  margin-left: 10px;
+    -webkit-transition:all .5s ease;
+  -moz-transition:all .5s ease;
+  -ms-transition:all .5s ease;
+  -o-transition:all .5s ease;
+  cursor: pointer;
+
+}
+
+#homeLogo:hover
+{
+  opacity: 0.7;
+}

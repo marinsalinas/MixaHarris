@@ -265,3 +265,14 @@ body , html
     display: none;
   }
 
+.Bca {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/conf1.png) bottom;
+  text-indent: -99999px;
+}
+.Bca:hover {
+  background: url(../images/conf2.png) no-repeat;
+  background-position: 0 0;
+}

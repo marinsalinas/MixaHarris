@@ -67,7 +67,7 @@ if($priv == 1){
 	$usuario=validUser($user, $pass);
 		if(!empty($usuario)){
 			$_SESSION['usuario'] = $usuario;
-			header('Location: ../main/pagindex/userindex.php');	
+			header('Location: ../main/store/home.php');	
 		}else{echo htmlentities("Usuario o contraseña no válidos - User");}
 }
 if ($priv == 0) {
