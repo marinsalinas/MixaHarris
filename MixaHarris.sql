@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-05-2013 a las 04:37:42
+-- Tiempo de generación: 23-05-2013 a las 22:03:25
 -- Versión del servidor: 5.5.31
 -- Versión de PHP: 5.4.14
 
@@ -53,6 +53,20 @@ INSERT INTO `administrador` (`idadministrador`, `administradorNombre`, `administ
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `carrito`
+--
+
+CREATE TABLE IF NOT EXISTS `carrito` (
+  `idcarrito` int(11) NOT NULL AUTO_INCREMENT,
+  `idproductos` int(11) NOT NULL,
+  `idcliente` int(11) NOT NULL,
+  `carritoDefault` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idcarrito`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `clientes`
 --
 
@@ -74,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   PRIMARY KEY (`idclientes`),
   UNIQUE KEY `idclientes_UNIQUE` (`idclientes`),
   UNIQUE KEY `clientesUsername_UNIQUE` (`clientesUsername`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabla de Clientes' AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabla de Clientes' AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -84,7 +98,44 @@ INSERT INTO `clientes` (`idclientes`, `clientesNombre`, `clientesApellido`, `cli
 (1, 'MarÃ­n', 'Salinas SÃ¡nchez', 'NiÃ±o Artillero 113, Altamira', 64750, 'm.mslns27@gmail.com', 83592311, 'marinslns', 'efe4c534f51bff41db4c4f07500225f3', 8115780151, 'Estudiante', '1994-01-27', 'M', 1),
 (2, 'Andrea Lizbeth', 'Rojas HernÃ¡ndez', 'Contadores #333 TecnolÃ³gico Monterrey N.L.', 64700, 'arojas_hdz@hotmail.com', 83403812, 'arojas_hdz', 'arojas1505608', 8114813953, 'Estudiante', '1993-05-04', 'F', 1),
 (3, 'CibrÃ¡n', 'Samaniego RolÃ³n', 'Pase Lucio 29 Mirador, Monterrey N.L.', 64750, 'CibrnSamaniegoRoln@superrito.com', 83344556, 'evernshoid', '81dc9bdb52d04dc20036dbd8313ed055', 8114567814, 'Keeper', '1958-02-16', 'M', 1),
-(4, 'JosÃ©', 'GÃ³mez Cardenas', 'Cerrada Harto No. 469', 66064, 'acbriones2@outlook.com', 12876723, 'josego', '827ccb0eea8a706c4c34a16891f84e7b', 8115689235, 'Profesor', '1985-01-05', 'M', 1);
+(4, 'JosÃ©', 'GÃ³mez Cardenas', 'Cerrada Harto No. 469', 66064, 'acbriones2@outlook.com', 12876723, 'josego', '827ccb0eea8a706c4c34a16891f84e7b', 8115689235, 'Profesor', '1985-01-05', 'M', 1),
+(5, 'Alberto', 'Cortes', 'Enrique Segoivano 123', 6660, 'alberto@hotfuzz.com', 12345678, 'alberto', '3982b51a9097aabd3ebbe23491004223', 1234567890, 'AlbaÃ±il', '1993-08-03', 'M', 1),
+(6, 'Alexiss', 'Gamal', 'Enrique Segoivano 200', 6660, 'alex.gamal@gmail.com', 84455667, 'alexis', 'e9f99cff925f61d8c62fd0bc3b5edc54', 86655543, 'Estudiante', '2002-05-23', 'M', 1),
+(7, 'Xavier Chabelo', 'Lopez', 'Enrique Segoivano 125', 6660, 'chabelin@gmail.com', 84488585, 'chabelo', '0fdfba0f897becd5b5fbd0c1a7781c67', 5234566554, 'Amigo de todos los niÃ±os', '1900-05-09', 'M', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compras`
+--
+
+CREATE TABLE IF NOT EXISTS `compras` (
+  `idcompras` int(11) NOT NULL AUTO_INCREMENT,
+  `idproducto` int(11) NOT NULL,
+  `idcliente` int(11) NOT NULL,
+  `idcarrito` varchar(45) NOT NULL,
+  `fechac compra` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `folio` bigint(20) NOT NULL,
+  PRIMARY KEY (`idcompras`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`idcompras`, `idproducto`, `idcliente`, `idcarrito`, `fechac compra`, `folio`) VALUES
+(1, 16, 1, '6', '2013-05-23 21:57:14', 172604958),
+(2, 18, 1, '8', '2013-05-23 21:57:14', 172604958),
+(3, 6, 1, '14', '2013-05-23 21:57:14', 172604958),
+(4, 6, 1, '15', '2013-05-23 21:57:14', 172604958),
+(5, 17, 1, '17', '2013-05-23 21:57:14', 172604958),
+(6, 17, 1, '18', '2013-05-23 21:57:14', 172604958),
+(7, 17, 1, '19', '2013-05-23 21:57:14', 172604958),
+(8, 31, 1, '21', '2013-05-23 21:57:14', 172604958),
+(9, 31, 1, '23', '2013-05-23 21:57:14', 172604958),
+(10, 16, 1, '24', '2013-05-23 21:57:14', 172604958),
+(11, 6, 1, '25', '2013-05-23 21:57:14', 172604958),
+(12, 6, 1, '1', '2013-05-23 21:58:11', 11454160247);
 
 -- --------------------------------------------------------
 
@@ -164,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
 --
 
 INSERT INTO `productos` (`idproductos`, `productosNombre`, `productosMarca`, `productosModelo`, `productosDescripcion`, `productosPrecio`, `productosTipo`, `productosGarantia`, `proveedor_idproveedor`) VALUES
-(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra Electrica', 20000, 'GElectricas', 1, 2),
+(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra Electrica', 20000, '', 1, 2),
 (6, 'Guitarra ElÃ©ctrica', 'Fender', 'Jaguar', 'GElectricas', 19000, 'GElectricas', 1, 4),
 (7, 'Guitarra elÃ©ctrica', 'Fender', 'Jazz Master', 'GElectricas', 15000, 'GElectricas', 1, 4),
 (8, 'Guitarra electrica', 'Gibson', 'FireBird', 'GElectricas', 17000, 'GElectricas', 1, 12),
