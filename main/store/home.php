@@ -15,8 +15,8 @@
 	//cambie esto y lo puse dentro de la carpeta para evitarnos algunos errores y ademas no reacer codigo
 	//como lo de valid
 	require_once("../../login/valid.php");
-	require_once("../../login/validpriv.php");
-	validUser();
+	//require_once("../../login/validpriv.php");
+	//validUser();
 	//echo "<h1>MixaHarris - User Index Nuevo </h1>";
 	$usuario = $_SESSION['usuario'];
 	//print_r($usuario);
@@ -38,29 +38,30 @@
 			<section id='sidebar'>
 			<nav>
 				<figure class="cuadricula">
-					<img id="GElectricas" class="botonSeccion" src="../../images/cuadro1.png">
+					<img id="GElectricas" class="botonSeccion" src="../../images/cuadro1.png" onclick="location.href='store.php?seccion=GElectricas'">
 				</figure>
 
 				<figure class="cuadricula">
-					<img  id="Bajos" class="botonSeccion" src="../../images/cuadro2.png">
+					<img  id="Bajos" class="botonSeccion" src="../../images/cuadro2.png" onclick="location.href='store.php?seccion=Bajos'">
+				</figure>
 				</figure>
 
 				<figure class="cuadricula">
-					<img id="GAcusticas" class="botonSeccion" src="../../images/cuadro3.png">
+					<img id="GAcusticas" class="botonSeccion" src="../../images/cuadro3.png" onclick="location.href='store.php?seccion=GAcusticas'">
 				</figure>
 
 				<figure class="cuadricula">
-					<img id="Baterias" class="botonSeccion" src="../../images/cuadro4.png">
+					<img id="Baterias" class="botonSeccion" src="../../images/cuadro4.png" onclick="location.href='store.php?seccion=Baterias'">
 				</figure>
 				<figure class="cuadricula">
-					<img id="Teclados" class="botonSeccion" src="../../images/cuadro5.png">
+					<img id="Teclados" class="botonSeccion" src="../../images/cuadro5.png" onclick="location.href='store.php?seccion=Teclados'">
 				</figure>
 				</figure>
 				<figure class="cuadricula">
-					<img id="Viento" class="botonSeccion" src="../../images/cuadro6.png">
+					<img id="Viento" class="botonSeccion" src="../../images/cuadro6.png" onclick="location.href='store.php?seccion=Viento'">
 				</figure>
 				<figure class="cuadricula">
-					<img id="Audio" class="botonSeccion" src="../../images/cuadro7.png">
+					<img id="Audio" class="botonSeccion" src="../../images/cuadro7.png" onclick="location.href='store.php?seccion=Audio'">
 				</figure>
 			</nav>
 		</section>
