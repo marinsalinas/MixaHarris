@@ -19,6 +19,7 @@ session_start();
 	}
 	//es para poner en nombre en la pagina
 	$nombre =(($priv == 1) ? $user->clientesNombre : $user->administradorNombre);
+	$href = (($priv == 1) ? "../../main/pagindex/userindex.php" : "../../main/pagindex/adminindex.php");
 ?>
 
 <!doctype html>
@@ -36,9 +37,13 @@ session_start();
 <body>
 	<div id='navegador'>
 			<div id='homeLogo' onclick="location.href='../../index.html'">MixaHarris Home</div>
-			<div id='login'>	
-	
-			</div>
+			<div id='navAdmin'>	
+					Hola, <?php echo $nombre?> 
+					<form action='../../login/logout.php' id='blogout'>
+						<input id='button' type='submit' value='Logout'>	
+					</form> 
+					<a class="Bca" href=<?php echo "'".$href."'"; ?> title="Configurar datos personales">conf</a> 
+				 </div>
 		</div>
 	
 
