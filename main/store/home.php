@@ -24,7 +24,8 @@
 	?>
 	<div id='navegador'>
 			<div id='homeLogo'>MixaHarris User</div>
-				<div id='navAdmin'>	
+				<div id='navHome'>	
+<a class="Bcarrito" href="carrito.php" title="Carrito de compras">conf</a>
 					Hola, <?php echo $usuario->clientesNombre;?> 
 					<form action='../../login/logout.php' id='blogout'>
 						<input id='button' type='submit' value='Logout'>	
