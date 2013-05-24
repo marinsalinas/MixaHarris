@@ -38,8 +38,9 @@
 	<center><h2>MixaHarris</h2></center>
 						</br></br>
 	<p class='hdm'>Personal:</p>
-<a href='../../formupdate/view/edit_clientes.php'>Modificar mis datos</a>
-<a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a>
+</br></br>
+<a id='aFondo' href='../../formupdate/view/edit_clientes.php'>Modificar mis datos</a>
+<a id='aFondo' href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a>
 
 </div></center>		
 
