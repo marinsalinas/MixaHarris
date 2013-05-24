@@ -1,4 +1,4 @@
-	h1{	
+ 	h1{	
     background: #ff9600;
   	color: rgb(255, 255, 255);
   	font-family:'Ubuntu Sans', sans-serif;
@@ -157,6 +157,11 @@ z-index: 2;
 		padding-top: 15px;
 		position: relative;
     }
+  #navHome{
+    margin-left: 75%;
+    padding-top: 15px;
+    position: relative;
+    }
 	
 	#containerAdmin{
 		widht: 80%;
@@ -275,4 +280,107 @@ body , html
 .Bca:hover {
   background: url(../images/conf2.png) no-repeat;
   background-position: 0 0;
+}
+.Bcarrito {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/carrito.png) bottom;
+  text-indent: -99999px;
+}
+.Bcarrito:hover {
+  opacity: 60%;
+}
+
+
+
+#menuModClientes{
+   background:#ff9600;
+    /*float:right;*/
+    border-radius: 5px;
+    /*margin-left:*/
+    padding: 5px;
+    margin-top: 80px;
+    border-right: 10px;
+    width: 700px;
+}
+
+p.hdm
+  {
+    color: #000;
+    font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+    font-size: 2em;
+  }
+#tablaModCliente{
+  margin-bottom: 30px;
+  font-family:'Ubuntu Sans', sans-serif;
+  font-size: 20px;
+}
+
+#tablaModCliente th{
+  background: none;
+  text-align: left;
+  font-family:'Ubuntu Sans', sans-serif;
+  color: #000;
+}
+#tablaModCliente td{
+  border:0px solid #000000;  
+  font-family:'Ubuntu Sans', sans-serif;
+  text-align: left;
+}
+
+table{
+  border:3px solid #000000;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+  /*border-collapse: collapse;*/
+ /* table-layout: auto;*/
+}
+th
+{
+background-color:#000000;
+color:white;
+}
+td{
+  border:1px solid #000000;  
+  border-left: none;
+  border-right: none;
+}
+
+#menuModClientes h2
+  {
+    color: #000;
+    font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
+    font-size: 3em;
+  }
+
+
+  #aFondo{
+  color: #000;
+  text-decoration: none;
+}
+#aFondo:hover{
+    background-color:#000;
+    color:#ff9600;
+   font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+    margin: .2em;
+    position: relative; 
+}
+
+table a{
+  color: #000;
+  text-decoration: none;
+}
+table a:hover{
+    background-color:#000;
+    color:#ff9600;
+   font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+    margin: .2em;
+    position: relative; 
 }
