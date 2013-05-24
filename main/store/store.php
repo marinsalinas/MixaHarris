@@ -27,16 +27,30 @@ $i=1;//Contador de elementos en el array
 //echo "<pre>";
 //print_r($productos);
 //echo "</pre>";
+$id = null;
+	foreach ($usuario as $key => $atrib) {
+		$id = $atrib;
+		break;
+	}
+
+	$priv = null;
+	foreach ($usuario as $key => $atrib) {
+		$priv = $atrib;
+	}
+	//es para poner en nombre en la pagina
+	$nombre =(($priv == 1) ? $usuario->clientesNombre : $usuario->administradorNombre);
+	$href = (($priv == 1) ? "../../main/pagindex/userindex.php" : "../../main/pagindex/adminindex.php");
+
 echo "<!--Comienzo de la seccion catalogo-->";?>
 <div id='navegador'>
 			<div id='homeLogo'>MixaHarris User</div>
 				<div id='navHome'>	
 <a class="Bcarrito" href="carrito.php" title="Carrito de compras">conf</a>
-					Hola, <?php echo $usuario->clientesNombre;?> 
+					Hola, <?php echo $nombre;?> 
 					<form action='../../login/logout.php' id='blogout'>
 						<input id='button' type='submit' value='Logout'>	
 					</form> 
-					<a class="Bca" href="../pagindex/userindex.php" title="Configurar datos personales">conf</a> 
+					<a class="Bca" href=<?php echo "'".$href."'"; ?>  title="Configurar datos personales">conf</a> 
 				 </div>
 		</div><!--navegador-->
 <div id='containerAdmin1'>
