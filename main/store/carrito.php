@@ -2,6 +2,9 @@
 //esto es para validad session carrito etc etc etc
 session_start();
 //falta el require de que este en una session y sea usuario
+require_once("../../login/valid.php");
+require_once("../../login/validpriv.php");
+validUser();
 require_once("../lib/storelib.php");
 
 if(empty($_GET['idproducto'])){
