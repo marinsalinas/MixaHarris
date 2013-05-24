@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-05-2013 a las 22:03:25
+-- Tiempo de generación: 24-05-2013 a las 13:17:22
 -- Versión del servidor: 5.5.31
 -- Versión de PHP: 5.4.14
 
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `compras` (
   `fechac compra` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `folio` bigint(20) NOT NULL,
   PRIMARY KEY (`idcompras`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Volcado de datos para la tabla `compras`
@@ -135,7 +135,8 @@ INSERT INTO `compras` (`idcompras`, `idproducto`, `idcliente`, `idcarrito`, `fec
 (9, 31, 1, '23', '2013-05-23 21:57:14', 172604958),
 (10, 16, 1, '24', '2013-05-23 21:57:14', 172604958),
 (11, 6, 1, '25', '2013-05-23 21:57:14', 172604958),
-(12, 6, 1, '1', '2013-05-23 21:58:11', 11454160247);
+(12, 6, 1, '1', '2013-05-23 21:58:11', 11454160247),
+(13, 2, 1, '3', '2013-05-24 05:15:06', 11121894088);
 
 -- --------------------------------------------------------
 
@@ -208,14 +209,14 @@ CREATE TABLE IF NOT EXISTS `productos` (
   PRIMARY KEY (`idproductos`,`proveedor_idproveedor`),
   UNIQUE KEY `idproductos_UNIQUE` (`idproductos`),
   KEY `fk_productos_proveedor_idx` (`proveedor_idproveedor`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
 INSERT INTO `productos` (`idproductos`, `productosNombre`, `productosMarca`, `productosModelo`, `productosDescripcion`, `productosPrecio`, `productosTipo`, `productosGarantia`, `proveedor_idproveedor`) VALUES
-(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra Electrica', 20000, '', 1, 2),
+(2, 'Guitarra electrica', 'Gibson', 'Les Paul', 'Guitarra Electrica', 20000, 'GElectricas', 1, 2),
 (6, 'Guitarra ElÃ©ctrica', 'Fender', 'Jaguar', 'GElectricas', 19000, 'GElectricas', 1, 4),
 (7, 'Guitarra elÃ©ctrica', 'Fender', 'Jazz Master', 'GElectricas', 15000, 'GElectricas', 1, 4),
 (8, 'Guitarra electrica', 'Gibson', 'FireBird', 'GElectricas', 17000, 'GElectricas', 1, 12),
@@ -227,14 +228,35 @@ INSERT INTO `productos` (`idproductos`, `productosNombre`, `productosMarca`, `pr
 (14, 'Guitarra electrica', 'Fender', 'Stratocaster', 'GElectricas', 19000, 'GElectricas', 0, 4),
 (15, 'Guitarra electrica', 'Fender', 'Squier', 'GElectricas', 12000, 'GElectricas', 1, 4),
 (16, 'Guitarra acustica', 'Yamaha', 'GC', 'Guitarra acustica', 5000, 'GAcusticas', 1, 1),
-(17, 'Guitarra acustica', 'Yamaha', 'CG', 'Guitarra acustica', 3000, 'GAcusticas', 0, 1),
+(17, 'Guitarra ElectroacÃºstica', 'Takamine', 'EG440', 'TAK G NEX FLAME MPL RED', 3000, 'GAcusticas', 0, 6),
 (18, 'Guitarra acustica', 'Yamaha', 'CS', 'Guitarra acustica', 4500, 'GAcusticas', 0, 1),
 (19, 'Guitarra acustica', 'Yamaha', 'C', 'Guitarra acustica', 4000, 'GAcusticas', 1, 1),
 (20, 'Bateria', 'Mapex', 'Saturn', 'Bateria', 33000, 'Baterias', 1, 5),
 (21, 'Bateria', 'Mapex', 'QR', 'Bateria', 25000, 'Baterias', 1, 5),
 (22, 'Bateria', 'Mapex', 'Pro M', 'Bateria', 25000, 'Baterias', 1, 5),
 (31, 'Saxofon', 'Yamaha', 'YAS-23', 'Saxofon Alto', 15000, 'Viento', 1, 1),
-(32, 'DJ PAD', 'M-AUDIO', 'YS0090', 'Buena Calida', 4500, 'Audio', 1, 6);
+(32, 'DJ PAD', 'M-AUDIO', 'YS0090', 'Buena Calida', 4500, 'Audio', 1, 6),
+(33, 'Jazz Bass', 'Fender', 'AMERICAN DELUXE VRW 3TS', 'Cedro Acabado Retro', 24521, 'Bajos', 1, 8),
+(34, 'Bajo ElÃ©ctrico', 'Ibanez', 'BTB675-NTF', '5 Cuerdas, Pino Canadiense, Color Natural', 8744, 'Bajos', 0, 13),
+(35, 'Bajo ThunderBird', 'Gibson', 'Vintaje Sunburst Black', 'Negra, Cero EstÃ¡tica', 15742, 'Bajos', 1, 12),
+(36, 'Bajo ElÃ©ctrico', 'Epiphone', 'EB-3 BASS ', 'SG, SET 2-PICKU', 4173, 'Bajos', 0, 3),
+(37, 'Bajo Electroacustico', 'Fender', 'KINGMAN BASS SCE V2', 'Gran Sonido conectado o sin conectar', 5885, 'Bajos', 0, 8),
+(38, 'Sintetizador', 'NORD', 'ELECTRO 61 ELECTROMECHANIC', 'Color Rojo', 13592, 'Teclados', 0, 3),
+(39, 'Teclado', 'YAMAHA', 'CP50', 'Piano PRO portatil 88 teclas', 21139, 'Teclados', 1, 1),
+(40, 'Sintetizador', 'KORG', 'MK1', 'sintetizer MicroKorg  con microfono', 5197, 'Teclados', 1, 13),
+(41, 'PIANO DIGITAL', 'CASIO', 'CDP200R', '88 teclas, 48 de polifonia, 670 tonos, pedal Sp3', 9496, 'Teclados', 1, 10),
+(42, 'Piano PRO', 'YAMAHA', 'CP5', 'P/Escenario 88 Teclas', 30801, 'Teclados', 1, 1),
+(43, 'Bateria ElÃ©ctrica', 'ALESIS', 'DM6 KIT', 'Kit de bateria Hardware PADS y MODULO', 6174, 'Baterias', 0, 10),
+(44, 'Guitarra ElectroacÃºstica', 'Fender', 'CD220', 'SCE ASH BURL -V2', 4807, 'GAcusticas', 0, 8),
+(45, 'Trombon Tenor', 'YAMAHA', 'YSL354E', 'Vara Estandar', 8275, 'Viento', 0, 1),
+(46, 'Flauta Transversal', 'YAMAHA', 'YFL211', 'Estandar Plateada, Sol Desalineado, llaves cubiertas', 5074, 'Viento', 0, 1),
+(47, 'Clarinete', 'YAMAHA', 'YCL250', 'Clarinete Estandar de Resina', 6392, 'Viento', 1, 1),
+(48, 'Armonica', 'HOHNER', '53220', 'HOHNER BLUES HARP', 439, 'Viento', 0, 8),
+(49, 'Tuba', 'YAMAHA', 'YBB105', 'Tuba estandar 3 pistones', 42011, 'Viento', 0, 1),
+(50, 'Microfono Estudio', 'Shure', '55SH SERIE II', 'Vocal DinÃ¡mico 50-15,000 CARD Retro', 2191, 'Audio', 0, 3),
+(51, 'Amplificador', 'BehRinger', 'EP2000', 'Poder EP2000', 5175, 'Audio', 1, 5),
+(52, 'Estacion DJ', 'NATIVE', '20900', 'Traktor Kont S4', 13396, 'Audio', 1, 5),
+(53, 'Cable PLUG', 'Fender', '00990', '18.5ft Agle Instrument', 244, 'Audio', 0, 4);
 
 -- --------------------------------------------------------
 
