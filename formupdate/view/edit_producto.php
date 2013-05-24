@@ -49,7 +49,102 @@ $admin = $_SESSION['usuario'];
 			<tr><th>Descripci&oacute;n:</th><td>
 				<input type='text' name='descripcion' value=<?php echo "'".$prodModif->productosDescripcion."'"?>/></td></tr>
 			<tr><th>Precio:</th><td><input type='text' name='precio' value=<?php echo "'".$prodModif->productosPrecio."'"?>/></td></tr>
-			<tr><th>Tipo:</th><td><input type='text' name='tipo' value=<?php echo "'".$prodModif->productosTipo."'"?>/></td></tr>
+			<tr><th>Tipo:</th><td><select name='tipo'>
+					<?php
+					switch ($prodModif->productosTipo) {
+						case "GElectricas":
+						echo "
+						<option value='GElectricas' selected>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+						
+						case "Bajos":
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos' selected>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+
+						case "GAcusticas":
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas' selected>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+
+						case "Baterias":
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias' selected>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+
+						case "Teclados":
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados' selected>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+
+						case "Viento":
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento' selected>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+
+						case "Audio":
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio' selected>Audio y m&aacute;s</option>";
+						break;
+
+						default:
+						echo "
+						<option value='GElectricas'>Guitarras El&eacute;ctricas</option>
+						<option value='Bajos'>Bajos</option>
+						<option value='GAcusticas'>Guitarras Ac&uacute;sticas</option>
+						<option value='Baterias'>Baterias</option>
+						<option value='Teclados'>Teclados</option>
+						<option value='Viento'>Instrumentos de viento</option>
+						<option value='Audio'>Audio y m&aacute;s</option>";
+						break;
+					}
+
+
+					
+					?>
+				</select></td></tr>
 			<tr><th>Garantia:</th>
 				<?php
 				if($prodModif->productosGarantia == 1){
