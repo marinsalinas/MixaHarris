@@ -16,8 +16,8 @@ h2{
 
 	a{
 	/*background: rgb(217,201,154);*/
-	border-radius: .2em;
-  	color: #ff9600;
+	border-radius: 5px;
+  	color: #1d1d1d;
 	font-weight: bold;
   	font-family: 'Ubuntu Sans', sans-serif;
   	font-size: 1em;
@@ -26,15 +26,19 @@ h2{
 	}
 	
 	a:hover{
-	background-color:#ffb033;
-	color:#1d1d1d;
+  color: #000;
 	border-radius:5px;
-	padding:3 px;
+	padding: 3px;
 	transition:all 0.5s linear;
-	-webkit-transition:all 0.1s linear;
+	-webkit-transition:all 0.3s linear;
 	-moz-transition:all 0.1s linear;
 	-o-transition:all 0.1s linear;
 	}
+
+  #reg{
+      font-family: 'Mouse Memoirs', sans-serif, tahoma;
+
+  }
 
 #lin{
   display: inline-block;
@@ -140,14 +144,19 @@ h2{
 
 #registrar
 {
-position: absolute;
+border-radius: 8px;
+background-color: #ff9600;
+position: fixed;
+margin-top: 4.8%;
 padding-top: 4em;
-margin-left: 50%;
+margin-left: 42%;
 font-family: 'Mouse Memoirs' 'Ubuntu Sans', sans-serif;
 font-size: 4em;
 font-style: bold;
 display: inline-block;
+height: 260px;
 z-index: 2;
+color: #1d1d1d;
 }
 	
 	/*--------STYLE ADMIN------*/
