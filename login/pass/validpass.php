@@ -41,9 +41,12 @@ function updatePassWordUser($passNuevo, $idCliente)
 $result= mysql_query($sql);
 	if ($result >0){
 		echo "Se ha ingresado la informacion exitosamente";
+				echo '<script>alert("Se ha ingresado la información exitosamente");</script>';
+		echo "<script>location.href='../../main/pagindex/userindex.php';</script>";
 	}
 	else {
-		echo  "Existe una inconsistencia en informacion";
+		echo '<script>alert("Existe una inconsistencia en la información");</script>';
+		echo "<script>location.href='cambiar_pass.php';</script>";
 	}		 
 
 }
@@ -54,10 +57,14 @@ function updatePassWordAdmin($passNuevo, $idAdmin)
 // echo "<br>".$sql;
 $result= mysql_query($sql);
 	if ($result >0){
-		echo "Se ha ingresado la informacion exitosamente";
+		//echo "Se ha ingresado la informacion exitosamente";
+		echo '<script>alert("Se ha ingresado la información exitosamente");</script>';
+		echo "<script>location.href='../../main/pagindex/adminindex.php';</script>";
 	}
 	else {
-		echo  "Existe una inconsistencia en informacion";
+		//echo  "Existe una inconsistencia en informacion";
+		echo '<script>alert("Existe una inconsistencia en la información");</script>';
+		echo "<script>location.href='cambiar_pass.php';</script>";
 	}		 
 
 }
@@ -68,19 +75,24 @@ if($privilegio == 1){
 	$passNuevo = md5($passNuevo);
 	updatePassWordUser($passNuevo, $id);
 	}else{
-		echo "La contrase&ntilde;a actual no coincide con la del formulario";
+		//echo "la contra no coincide";
+		echo '<script>alert("La contraseña actual no coincide con la del formulario");</script>';
+		echo "<script>location.href='cambiar_pass.php';</script>";
 	}
-}elseif($privilegio = 0) {
+}elseif($privilegio == 0) {
 	
 	if($passActual == selectpasswordAdmin($id)){
 	$passNuevo = md5($passNuevo);
 	updatePassWordAdmin($passNuevo, $id);
 	}else{
-		echo "La contrase&ntilde;a actual no coincide con la del formulario";
+		//echo "la contra no coincide";
+		echo '<script>alert("La contraseña actual no coincide con la del formulario");</script>';
+		echo "<script>location.href='cambiar_pass.php';</script>";
 	}
 
 }else{
-	echo "No se pudo encontrar el tipo de usuario";
+		echo '<script>alert("No se pudo encontrar el tipo de usuario");</script>';
+		echo "<script>location.href='cambiar_pass.php';</script>";
 }	
 
 ?>
