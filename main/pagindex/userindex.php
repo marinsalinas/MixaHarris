@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -38,10 +38,9 @@
 	<center><h2>MixaHarris</h2></center>
 						</br></br>
 	<p class='hdm'>Personal:</p>
-<ul class='liad'>
-	<li><a href='../../formupdate/view/edit_clientes.php'>Modificar mis datos</a></li>
-	<li><a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a></li>
-</ul>
+<a href='../../formupdate/view/edit_clientes.php'>Modificar mis datos</a>
+<a href='../../login/pass/cambiar_pass.php'>Cambiar mi contraseña</a>
+
 </div></center>		
 
 
@@ -75,5 +74,5 @@
 				</figure>
 			</nav>
 		</section>
-</body>
+	</body>
 </html>
