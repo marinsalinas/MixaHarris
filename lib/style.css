@@ -393,3 +393,12 @@ table a:hover{
     margin: .2em;
     position: relative; 
 }
+
+table#cata{
+  width: 600px;
+  margin: 0 auto;
+  background: #ff9600;
+  font-weight: bold;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-size: 1em;
+}
